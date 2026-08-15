@@ -2711,25 +2711,57 @@
     function renderCategoriesTo(containerId) {
       const container = document.getElementById(containerId);
       if (!container) return;
-      
+
       container.innerHTML = '';
       Object.entries(DB).forEach(([groupName, subCats]) => {
         const group = document.createElement('div');
         group.className = 'cat-group';
-        group.innerHTML = `<div class="cat-group-header">${groupName}</div>`;
+
+        const subCatKeys = Object.keys(subCats);
+        const allSelected = subCatKeys.every(c => state.selectedCats.has(c));
+
+        const header = document.createElement('div');
+        header.className = 'cat-group-header';
+        header.style.cursor = 'pointer';
+        header.style.display = 'flex';
+        header.style.justifyContent = 'space-between';
+        header.style.alignItems = 'center';
+        header.innerHTML = `<span>${groupName}</span><span style="font-size:1.2rem; opacity: 0.8">${allSelected ? '☑' : '☐'}</span>`;
+
+        header.onclick = () => {
+          const currentlyAll = subCatKeys.every(c => state.selectedCats.has(c));
+          if (currentlyAll) {
+            let toDelete = 0;
+            subCatKeys.forEach(c => { if (state.selectedCats.has(c)) toDelete++; });
+            if (state.selectedCats.size > toDelete) {
+              subCatKeys.forEach(c => state.selectedCats.delete(c));
+            } else {
+              toast('Au moins une catégorie !', 'warning');
+              return;
+            }
+          } else {
+            subCatKeys.forEach(c => state.selectedCats.add(c));
+          }
+          renderCategories();
+        };
+        group.appendChild(header);
+
         const grid = document.createElement('div');
         grid.className = 'cat-grid';
-        
+
         Object.keys(subCats).forEach(cat => {
           const meta = CATEGORIES_META[cat] || { emoji: '🎯', color: '#888' };
           const sel = state.selectedCats.has(cat);
           const item = document.createElement('div');
           item.className = 'cat-item' + (sel ? ' selected' : '');
           item.innerHTML = `<div class="cat-check"><span class="cat-check-icon">✓</span></div><div class="cat-name">${meta.emoji} ${cat}</div>`;
-          item.onclick = () => toggleCat(cat, item);
+          item.onclick = () => {
+            toggleCat(cat, item);
+            renderCategories();
+          };
           grid.appendChild(item);
         });
-        
+
         group.appendChild(grid);
         container.appendChild(group);
       });
@@ -4181,7 +4213,7 @@
     function promptRestartGame() {
       showModal('🔄 Relancer ?', 'Voulez-vous relancer une nouvelle partie avec ces mêmes joueurs ?', [
         { label: 'Annuler', cls: 'btn-ghost' },
-        { label: 'Relancer', cls: 'btn-primary', fn: onRejouer }
+        { label: 'Relancer', cls: 'btn-primary', action: onRejouer }
       ]);
     }
 
@@ -4200,7 +4232,7 @@
       showModal('🔄 Relancer ?', 'Relancer une nouvelle partie avec les joueurs actuels ?', [
         { label: 'Annuler', cls: 'btn-ghost' },
         {
-          label: 'Relancer', cls: 'btn-primary', fn: async () => {
+          label: 'Relancer', cls: 'btn-primary', action: async () => {
             onRejouer();
             setTimeout(olHostStart, 500); // Relance automatiquement après reset
           }
