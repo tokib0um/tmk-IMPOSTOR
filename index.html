@@ -651,6 +651,7 @@ label{display:block;font-size:.75rem;color:var(--text2);margin-bottom:5px;font-w
   <div class="game-topbar">
     <div class="game-round-badge" id="game-round-badge">TOUR 1</div>
     <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn btn-ghost btn-sm" style="width:auto;padding:6px;font-size:1.2rem" onclick="startGame()" title="Relancer avec les mêmes joueurs">🔄</button>
       <div class="game-alive-count" id="game-alive-count">— joueurs</div>
       <button class="btn btn-danger btn-sm" style="width:auto;padding:6px 12px" onclick="confirmEnd()">⏹</button>
     </div>
@@ -969,199 +970,199 @@ const DB = {
   // ═══════════════════════════════
 
   "One Piece": [
-    ["Luffy","Naruto"],                        // héros shonen solaires, même énergie
-    ["Luffy","Goku"],                          // naïfs surpuissants qui mangent tout
-    ["Zoro","Levi Ackerman"],                  // épéistes silencieux, bras droit
-    ["Zoro","Sasuke"],                         // rivaux froids à l'ambition blessée
-    ["Ace","Rengoku"],                         // feu, panache, meurent tragiquement
-    ["Shanks","Whitebeard"],                   // empereurs bienveillants à équipages
-    ["Mihawk","Zoro"],                         // maître et élève épéistes légendaires
-    ["Kaido","Broly"],                         // invincibles berserkers alcoolisés
-    ["Nami","Mikasa Ackerman"],                // filles badass indispensables à l'équipage
-    ["Robin","Rukia"],                         // femmes mystérieuses passé sombre
-    ["Doflamingo","Aizen"],                    // manipulateurs souriants en costume
-    ["Sanji","Rock Lee"],                      // combattants jambes, jamais les mains
-    ["Law","Sasuke"],                          // cool boys tatoués, ambition vengeance
-    ["Luffy","Tanjiro"],                       // héros gentils qui protègent les proches
-    ["Big Mom","Kaguya"],                      // matriarches surpuissantes terrifiantes
-    ["Garp","Netero"],                         // vieux géants humbles et ultra puissants
+    ["Luffy (One Piece)","Naruto (Naruto)"],
+    ["Luffy (One Piece)","Goku (Dragon Ball)"],
+    ["Zoro (One Piece)","Levi Ackerman (Attaque des Titans)"],
+    ["Zoro (One Piece)","Sasuke (Naruto)"],
+    ["Ace (One Piece)","Rengoku (Demon Slayer)"],
+    ["Shanks (One Piece)","Whitebeard (One Piece)"],
+    ["Mihawk (One Piece)","Zoro (One Piece)"],
+    ["Kaido (One Piece)","Broly (Dragon Ball)"],
+    ["Nami (One Piece)","Mikasa Ackerman (Attaque des Titans)"],
+    ["Robin (One Piece)","Rukia (Bleach)"],
+    ["Doflamingo (One Piece)","Aizen (Bleach)"],
+    ["Sanji (One Piece)","Rock Lee (Naruto)"],
+    ["Law (One Piece)","Sasuke (Naruto)"],
+    ["Luffy (One Piece)","Tanjiro (Demon Slayer)"],
+    ["Big Mom (One Piece)","Kaguya (Naruto)"],
+    ["Garp (One Piece)","Netero (Hunter x Hunter)"],
   ],
 
   "Naruto": [
-    ["Naruto","Luffy"],                        // même énergie folle, rêve de chef
-    ["Naruto","Deku"],                         // héros sous-estimés, mentors légendaires
-    ["Naruto","Goku"],                         // blonds naïfs qui surpassent tout le monde
-    ["Sasuke","Zuko"],                         // fils rebelles à la cicatrice, côté obscur
-    ["Sasuke","Levi Ackerman"],                // froids, efficaces, portent tout seuls
-    ["Itachi","Aizen"],                        // génies qui jouaient un double jeu
-    ["Kakashi","Byakuya"],                     // capitaines distants aux cheveux blancs
-    ["Pain","Thanos"],                         // villains idéologiques, éliminer pour sauver
-    ["Madara","All For One"],                  // boss final qui tire les ficelles dans l'ombre
-    ["Jiraiya","All Might"],                   // mentors puissants qui meurent en héros
-    ["Orochimaru","Aizen"],                    // scientifiques serpents manipulateurs
-    ["Rock Lee","Might Guy"],                  // taijutsu, sourcils, passion brûlante
-    ["Gaara","Kaneki Ken"],                    // orphelins monstres rédempteurs
-    ["Shikamaru","L"],                         // génies stratèges qui bâillent tout le temps
-    ["Hinata","Ochaco"],                       // filles timides amoureuses du héros
+    ["Naruto (Naruto)","Luffy (One Piece)"],
+    ["Naruto (Naruto)","Deku (My Hero Academia)"],
+    ["Naruto (Naruto)","Goku (Dragon Ball)"],
+    ["Sasuke (Naruto)","Zuko (Films cultes)"],
+    ["Sasuke (Naruto)","Levi Ackerman (Attaque des Titans)"],
+    ["Itachi (Naruto)","Aizen (Bleach)"],
+    ["Kakashi (Naruto)","Byakuya (Bleach)"],
+    ["Pain (Naruto)","Thanos (Marvel)"],
+    ["Madara (Naruto)","All For One (My Hero Academia)"],
+    ["Jiraiya (Naruto)","All Might (My Hero Academia)"],
+    ["Orochimaru (Naruto)","Aizen (Bleach)"],
+    ["Rock Lee (Naruto)","Might Guy (Naruto)"],
+    ["Gaara (Naruto)","Kaneki Ken (Films cultes)"],
+    ["Shikamaru (Naruto)","L (Death Note)"],
+    ["Hinata (Naruto)","Ochaco (My Hero Academia)"],
   ],
 
   "Jujutsu Kaisen": [
-    ["Gojo","Aizen"],                          // surpuissants qui s'ennuient de dominer
-    ["Gojo","All Might"],                      // piliers souriants qui portent tout un système
-    ["Sukuna","Madara"],                       // rois ancestraux invincibles revenus
-    ["Sukuna","Muzan"],                        // boss démons aux formes multiples
-    ["Yuji","Tanjiro"],                        // gentils gars qui portent un monstre en eux
-    ["Yuji","Naruto"],                         // héros positifs porteurs d'une malédiction
-    ["Megumi","Sasuke"],                       // sombres, pragmatiques, famille blessée
-    ["Mahito","Dabi"],                         // vilains nihilistes qui jouissent du chaos
-    ["Nobara","Maki Zenin"],                   // filles brutes sans complexe
-    ["Kenjaku","Orochimaru"],                  // savants immortels qui changent de corps
-    ["Yuta","Ichigo"],                         // puissance extraordinaire venue de l'amour
-    ["Toji","Levi Ackerman"],                  // sans chakra/nen mais surpassent tous les autres
+    ["Gojo (Jujutsu Kaisen)","Aizen (Bleach)"],
+    ["Gojo (Jujutsu Kaisen)","All Might (My Hero Academia)"],
+    ["Sukuna (Jujutsu Kaisen)","Madara (Naruto)"],
+    ["Sukuna (Jujutsu Kaisen)","Muzan (Demon Slayer)"],
+    ["Yuji (Jujutsu Kaisen)","Tanjiro (Demon Slayer)"],
+    ["Yuji (Jujutsu Kaisen)","Naruto (Naruto)"],
+    ["Megumi (Jujutsu Kaisen)","Sasuke (Naruto)"],
+    ["Mahito (Jujutsu Kaisen)","Dabi (My Hero Academia)"],
+    ["Nobara (Jujutsu Kaisen)","Maki Zenin (Jujutsu Kaisen)"],
+    ["Kenjaku (Jujutsu Kaisen)","Orochimaru (Naruto)"],
+    ["Yuta (Jujutsu Kaisen)","Ichigo (Bleach)"],
+    ["Toji (Jujutsu Kaisen)","Levi Ackerman (Attaque des Titans)"],
   ],
 
   "Dragon Ball": [
-    ["Goku","Naruto"],                         // héros positifs qui veulent juste se battre
-    ["Goku","Luffy"],                          // naïfs surpuissants, mangeurs légendaires
-    ["Goku","Saitama"],                        // combattants qui cherchent un vrai défi
-    ["Goku","Superman"],                       // aliens bienveillants quasi invincibles
-    ["Vegeta","Sasuke"],                       // orgueilleux rivaux qui dépassent leur côté obscur
-    ["Vegeta","Homelander"],                   // ego démesuré, sentiment de supériorité de race
-    ["Broly","Hulk"],                          // colosses verts berserkers incontrôlables
-    ["Broly","Kaido"],                         // invincibles en colère, tout détruire
-    ["Frieza","Thanos"],                       // tyrans galactiques obsédés par la puissance
-    ["Beerus","Homelander"],                   // dieux imprévisibles qui tuent par caprice
-    ["Gohan","Deku"],                          // fils de héros qui refusent leur destin puis l'embrassent
-    ["Piccolo","Kakashi"],                     // mentors verts/masqués qui forment le fils du héros
-    ["Vegito","Gogeta"],                       // fusions des mêmes guerriers, styles différents
-    ["Zamasu","Light Yagami"],                 // dieux autoproclamés qui punissent les humains
-    ["Krillin","Rock Lee"],                    // humains dépassés qui se battent quand même
+    ["Goku (Dragon Ball)","Naruto (Naruto)"],
+    ["Goku (Dragon Ball)","Luffy (One Piece)"],
+    ["Goku (Dragon Ball)","Saitama (One Punch Man)"],
+    ["Goku (Dragon Ball)","Superman (DC)"],
+    ["Vegeta (Dragon Ball)","Sasuke (Naruto)"],
+    ["Vegeta (Dragon Ball)","Homelander (The Boys)"],
+    ["Broly (Dragon Ball)","Hulk (Marvel)"],
+    ["Broly (Dragon Ball)","Kaido (One Piece)"],
+    ["Frieza (Dragon Ball)","Thanos (Marvel)"],
+    ["Beerus (Dragon Ball)","Homelander (The Boys)"],
+    ["Gohan (Dragon Ball)","Deku (My Hero Academia)"],
+    ["Piccolo (Dragon Ball)","Kakashi (Naruto)"],
+    ["Vegito (Dragon Ball)","Gogeta (Dragon Ball)"],
+    ["Zamasu (Dragon Ball)","Light Yagami (Death Note)"],
+    ["Krillin (Dragon Ball)","Rock Lee (Naruto)"],
   ],
 
   "My Hero Academia": [
-    ["Deku","Naruto"],                         // sans pouvoir au départ, héros par volonté
-    ["Deku","Peter Parker"],                   // lycéens maladroits aux grands pouvoirs
-    ["All Might","Superman"],                  // symbole d'espoir au sourire indestructible
-    ["All Might","Jiraiya"],                   // mentors qui sacrifient tout pour l'élève
-    ["Bakugo","Vegeta"],                       // orgueil explosif, rival du héros
-    ["Bakugo","Inosuke"],                      // agressifs hurleurs qui s'améliorent malgré eux
-    ["Shoto Todoroki","Zuko"],                 // fils de puissants, feu et glace, père distant
-    ["Endeavor","Vegeta"],                     // pères froids obsédés par la supériorité
-    ["Toga","Harley Quinn"],                   // folles amoureuses du chaos, lames et sourires
-    ["Stain","Magneto"],                       // vilains avec une vraie idéologie pure
-    ["Dabi","Mahito"],                         // vilains nihilistes blessés qui brûlent tout
-    ["Aizawa","Kakashi"],                      // profs badass qui font semblant de s'en foutre
-    ["Hawks","Itachi"],                        // espions au service d'un système qu'ils détestent
+    ["Deku (My Hero Academia)","Naruto (Naruto)"],
+    ["Deku (My Hero Academia)","Peter Parker (Marvel)"],
+    ["All Might (My Hero Academia)","Superman (DC)"],
+    ["All Might (My Hero Academia)","Jiraiya (Naruto)"],
+    ["Bakugo (My Hero Academia)","Vegeta (Dragon Ball)"],
+    ["Bakugo (My Hero Academia)","Inosuke (Demon Slayer)"],
+    ["Shoto Todoroki (My Hero Academia)","Zuko (Films cultes)"],
+    ["Endeavor (My Hero Academia)","Vegeta (Dragon Ball)"],
+    ["Toga (My Hero Academia)","Harley Quinn (DC)"],
+    ["Stain (My Hero Academia)","Magneto (Marvel)"],
+    ["Dabi (My Hero Academia)","Mahito (Jujutsu Kaisen)"],
+    ["Aizawa (My Hero Academia)","Kakashi (Naruto)"],
+    ["Hawks (My Hero Academia)","Itachi (Naruto)"],
   ],
 
   "Hunter x Hunter": [
-    ["Gon","Luffy"],                           // fous positifs qui s'attirent les forts
-    ["Gon","Naruto"],                          // héros ronds émotionnellement explosifs
-    ["Killua","Sasuke"],                       // assassins famille sombre, meilleur ami du héros
-    ["Hisoka","Joker"],                        // fous du combat, maquillage, imprévisibles
-    ["Hisoka","Deadpool"],                     // violents drôles qui cassent le quatrième mur
-    ["Chrollo","Aizen"],                       // chefs charismatiques aux plans incompréhensibles
-    ["Meruem","Light Yagami"],                 // génies qui méprisent les humains puis changent
-    ["Netero","Yoda"],                         // petits vieux espiègles aux pouvoirs absolus
-    ["Kurapika","Sasuke"],                     // survivants d'un clan, vengeance obsessionnelle
-    ["Illumi","Itachi"],                       // grands frères qui ont brisé leur cadet
-    ["Bisky","Tsunade"],                       // femmes puissantes qui font semblant d'être faibles
+    ["Gon (Hunter x Hunter)","Luffy (One Piece)"],
+    ["Gon (Hunter x Hunter)","Naruto (Naruto)"],
+    ["Killua (Hunter x Hunter)","Sasuke (Naruto)"],
+    ["Hisoka (Hunter x Hunter)","Joker (DC)"],
+    ["Hisoka (Hunter x Hunter)","Deadpool (Marvel)"],
+    ["Chrollo (Hunter x Hunter)","Aizen (Bleach)"],
+    ["Meruem (Hunter x Hunter)","Light Yagami (Death Note)"],
+    ["Netero (Hunter x Hunter)","Yoda (Star Wars)"],
+    ["Kurapika (Hunter x Hunter)","Sasuke (Naruto)"],
+    ["Illumi (Hunter x Hunter)","Itachi (Naruto)"],
+    ["Bisky (Hunter x Hunter)","Tsunade (Naruto)"],
   ],
 
   "Bleach": [
-    ["Ichigo","Deku"],                         // ados ordinaires propulsés dans un monde de fous
-    ["Ichigo","Yuji Itadori"],                 // corps partagé avec un monstre ancien
-    ["Aizen","Gojo"],                          // invincibles qui manipulent la perception
-    ["Aizen","Light Yagami"],                  // génies froids au plan depuis le début
-    ["Kenpachi","Broly"],                      // guerriers purs qui vivent pour tuer
-    ["Byakuya","Itachi"],                      // nobles froids aux cheveux noirs, clan
-    ["Yhwach","Madara"],                       // ancêtres divins omniscients qui reviennent
-    ["Urahara","Kakashi"],                     // mentors excentriques cachant une vraie puissance
-    ["Rukia","Mikasa Ackerman"],               // filles petites mais redoutables, loyauté absolue
-    ["Grimmjow","Bakugo"],                     // agressifs bleus qui veulent se battre pour de vrai
+    ["Ichigo (Bleach)","Deku (My Hero Academia)"],
+    ["Ichigo (Bleach)","Yuji Itadori (Jujutsu Kaisen)"],
+    ["Aizen (Bleach)","Gojo (Jujutsu Kaisen)"],
+    ["Aizen (Bleach)","Light Yagami (Death Note)"],
+    ["Kenpachi (Bleach)","Broly (Dragon Ball)"],
+    ["Byakuya (Bleach)","Itachi (Naruto)"],
+    ["Yhwach (Bleach)","Madara (Naruto)"],
+    ["Urahara (Bleach)","Kakashi (Naruto)"],
+    ["Rukia (Bleach)","Mikasa Ackerman (Attaque des Titans)"],
+    ["Grimmjow (Bleach)","Bakugo (My Hero Academia)"],
   ],
 
   "Death Note": [
-    ["Light Yagami","Aizen"],                  // génies qui se croient des dieux
-    ["Light Yagami","Walter White"],           // hommes ordinaires corrompus par le pouvoir
-    ["Light Yagami","Meruem"],                 // intelligences froides qui méprisent l'humanité
-    ["L","Shikamaru"],                         // détectives à la posture bizarre, génie pur
-    ["L","Near"],                              // successeurs détectives au même style
-    ["Ryuk","Joker"],                          // catalyseurs du chaos qui regardent en rigolant
-    ["Misa","Toga Himiko"],                    // fan obsessionnelle amoureuse folle
-    ["Light","Lelouch vi Britannia"],          // lycéens géniaux qui veulent refaire le monde
+    ["Light Yagami (Death Note)","Aizen (Bleach)"],
+    ["Light Yagami (Death Note)","Walter White (Breaking Bad)"],
+    ["Light Yagami (Death Note)","Meruem (Hunter x Hunter)"],
+    ["L (Death Note)","Shikamaru (Naruto)"],
+    ["L (Death Note)","Near (Death Note)"],
+    ["Ryuk (Death Note)","Joker (DC)"],
+    ["Misa (Death Note)","Toga Himiko (My Hero Academia)"],
+    ["Light (Death Note)","Lelouch vi Britannia (Films cultes)"],
   ],
 
   "Demon Slayer": [
-    ["Tanjiro","Yuji Itadori"],               // doux porteurs d'un monstre, protègent leur sœur
-    ["Tanjiro","Luffy"],                       // héros qui pleurent et sourient autant
-    ["Rengoku","Ace"],                         // feu, panache, mort sacrificielle marquante
-    ["Zenitsu","Mineta"],                      // lâches comiques aux moments clés
-    ["Inosuke","Bakugo"],                      // agressifs hurleurs qui apprennent en se battant
-    ["Muzan","Aizen"],                         // boss qui changent de forme, toujours en avance
-    ["Muzan","Voldemort"],                     // immortels qui craignent la mort par-dessus tout
-    ["Doma","Mahito"],                         // vilains vides d'empathie qui sourient toujours
-    ["Yoriichi","Gojo"],                       // guerriers d'une autre époque hors catégorie
-    ["Akaza","Rengoku"],                       // miroir opposé, même force, philosophies inverses
+    ["Tanjiro (Demon Slayer)","Yuji Itadori (Jujutsu Kaisen)"],
+    ["Tanjiro (Demon Slayer)","Luffy (One Piece)"],
+    ["Rengoku (Demon Slayer)","Ace (One Piece)"],
+    ["Zenitsu (Demon Slayer)","Mineta (My Hero Academia)"],
+    ["Inosuke (Demon Slayer)","Bakugo (My Hero Academia)"],
+    ["Muzan (Demon Slayer)","Aizen (Bleach)"],
+    ["Muzan (Demon Slayer)","Voldemort (Harry Potter)"],
+    ["Doma (Demon Slayer)","Mahito (Jujutsu Kaisen)"],
+    ["Yoriichi (Demon Slayer)","Gojo (Jujutsu Kaisen)"],
+    ["Akaza (Demon Slayer)","Rengoku (Demon Slayer)"],
   ],
 
   "Attaque des Titans": [
-    ["Eren","Kaneki Ken"],                     // gentils transformés en monstres par la souffrance
-    ["Eren","Shinji Ikari"],                   // héros traumatisés qui deviennent ce qu'ils haïssaient
-    ["Levi","Zoro"],                           // meilleurs combattants de leur monde, froids
-    ["Levi","Mikasa Ackerman"],               // Ackermans, même sang, même fureur
-    ["Armin","Shikamaru"],                     // stratèges qui gagnent avec la tête pas les bras
-    ["Reiner","Sasuke"],                       // porteurs d'un lourd secret, craquent sous la pression
-    ["Reiner","Eren"],                         // miroirs l'un de l'autre, même fardeau
-    ["Zeke","Madara"],                         // grands-frères manipulateurs au plan de titan
-    ["Historia","Sansa Stark"],                // princesses fragiles qui deviennent reines
-    ["Hange","Bulma"],                         // scientifiques folles fascinées par les monstres
-    ["Erwin","Armin"],                         // commandants qui sacrifient tout pour la mission
+    ["Eren (Attaque des Titans)","Kaneki Ken (Films cultes)"],
+    ["Eren (Attaque des Titans)","Shinji Ikari (Films cultes)"],
+    ["Levi (Attaque des Titans)","Zoro (One Piece)"],
+    ["Levi (Attaque des Titans)","Mikasa Ackerman (Attaque des Titans)"],
+    ["Armin (Attaque des Titans)","Shikamaru (Naruto)"],
+    ["Reiner (Attaque des Titans)","Sasuke (Naruto)"],
+    ["Reiner (Attaque des Titans)","Eren (Attaque des Titans)"],
+    ["Zeke (Attaque des Titans)","Madara (Naruto)"],
+    ["Historia (Attaque des Titans)","Sansa Stark (Game of Thrones)"],
+    ["Hange (Attaque des Titans)","Bulma (Dragon Ball)"],
+    ["Erwin (Attaque des Titans)","Armin (Attaque des Titans)"],
   ],
 
   "One Punch Man": [
-    ["Saitama","Goku"],                        // cherchent un vrai adversaire depuis toujours
-    ["Saitama","All Might"],                   // héros invincibles qui portent seuls
-    ["Saitama","Superman"],                    // ultra puissants à l'aspect ordinaire
-    ["Garou","Deku"],                          // outsiders qui veulent prouver leur valeur
-    ["Garou","Reiner Braun"],                  // antagonistes qui comprennent les deux camps
-    ["Tatsumaki","Sakura Haruno"],             // filles puissantes sous-estimées à cause de leur look
-    ["Boros","Frieza"],                        // aliens conquérants qui cherchaient un défi
-    ["Bang","Yoda"],                           // vieux maîtres d'arts martiaux ultra puissants
-    ["Genos","Vegeta"],                        // second toujours à l'entraînement, jamais n°1
+    ["Saitama (One Punch Man)","Goku (Dragon Ball)"],
+    ["Saitama (One Punch Man)","All Might (My Hero Academia)"],
+    ["Saitama (One Punch Man)","Superman (DC)"],
+    ["Garou (One Punch Man)","Deku (My Hero Academia)"],
+    ["Garou (One Punch Man)","Reiner Braun (Attaque des Titans)"],
+    ["Tatsumaki (One Punch Man)","Sakura Haruno (Naruto)"],
+    ["Boros (One Punch Man)","Frieza (Dragon Ball)"],
+    ["Bang (One Punch Man)","Yoda (Star Wars)"],
+    ["Genos (One Punch Man)","Vegeta (Dragon Ball)"],
   ],
 
   "Fairy Tail": [
-    ["Natsu","Luffy"],                         // même énergie sauvage, équipage famille
-    ["Natsu","Ace"],                           // feu et panache, frères de cœur
-    ["Erza","Mikasa Ackerman"],               // guerrières blindées à la loyauté absolue
-    ["Gray","Sasuke"],                         // cool sombres sans chemise, rival du héros feu
-    ["Zeref","Light Yagami"],                  // personnages qui veulent leur propre destruction
-    ["Laxus","Vegeta"],                        // fils de, arrogants qui deviennent des alliés
-    ["Mavis","Yuki"],                          // fondatrices emprisonnées dans le temps
+    ["Natsu (Fairy Tail)","Luffy (One Piece)"],
+    ["Natsu (Fairy Tail)","Ace (One Piece)"],
+    ["Erza (Fairy Tail)","Mikasa Ackerman (Attaque des Titans)"],
+    ["Gray (Fairy Tail)","Sasuke (Naruto)"],
+    ["Zeref (Fairy Tail)","Light Yagami (Death Note)"],
+    ["Laxus (Fairy Tail)","Vegeta (Dragon Ball)"],
+    ["Mavis (Fairy Tail)","Yuki (Films cultes)"],
   ],
 
   "Tokyo Revengers": [
-    ["Takemichi","Naruto"],                    // losers qui refusent d'abandonner leurs amis
-    ["Takemichi","Deku"],                      // pas les plus forts mais les plus tenaces
-    ["Mikey","Luffy"],                         // chefs charismatiques qui inspirent les autres
-    ["Mikey","Hanma Shuji"],                   // imprevisibles dangereux qu on ne comprend pas
-    ["Draken","Zoro"],                         // bras droit fiable du chef, force tranquille
-    ["Draken","Katsuki Bakugo"],               // durs mais protecteurs pour qui compte
-    ["Kisaki","Light Yagami"],                 // manipulateurs froids qui tirent les ficelles
-    ["Kisaki","Aizen"],                        // intellects machiavéliques au sourire calme
-    ["Chifuyu","Killua"],                      // loyaux absolus à leur meilleur ami
-    ["Baji","Inosuke"],                        // sauvages imprévisibles au grand cœur caché
-    ["Hanma","Hisoka"],                        // fous du combat sans camp fixe
-    ["Mikey","Meruem"],                        // enfants prodigieux au pouvoir monstrueux
-    ["Kazutora","Reiner Braun"],               // antagonistes brisés par leur propre passé
-    ["Izana","Madara"],                        // rois rivaux qui veulent être reconnus
-    ["Smiley","Toga Himiko"],                  // fous qui rigolent en plein combat
-    ["Ran","Doflamingo"],                      // grands élégants sadiques qui jouent avec les autres
-    ["Rindo","Grimmjow"],                      // agressifs directs qui adorent les combats
-    ["Haruchiyo Sanzu","Dabi"],                // scarifiés fidèles à leur chef au détriment de tout
-    ["South Terano","Kaido"],                  // colosses au style brutal qui écrasent tout
-    ["Mikey","Eren Yeager"],                   // deux leaders qui basculent dans l'obscurité
+    ["Takemichi (Tokyo Revengers)","Naruto (Naruto)"],
+    ["Takemichi (Tokyo Revengers)","Deku (My Hero Academia)"],
+    ["Mikey (Tokyo Revengers)","Luffy (One Piece)"],
+    ["Mikey (Tokyo Revengers)","Hanma Shuji (Tokyo Revengers)"],
+    ["Draken (Tokyo Revengers)","Zoro (One Piece)"],
+    ["Draken (Tokyo Revengers)","Katsuki Bakugo (My Hero Academia)"],
+    ["Kisaki (Tokyo Revengers)","Light Yagami (Death Note)"],
+    ["Kisaki (Tokyo Revengers)","Aizen (Bleach)"],
+    ["Chifuyu (Tokyo Revengers)","Killua (Hunter x Hunter)"],
+    ["Baji (Tokyo Revengers)","Inosuke (Demon Slayer)"],
+    ["Hanma (Tokyo Revengers)","Hisoka (Hunter x Hunter)"],
+    ["Mikey (Tokyo Revengers)","Meruem (Hunter x Hunter)"],
+    ["Kazutora (Tokyo Revengers)","Reiner Braun (Attaque des Titans)"],
+    ["Izana (Tokyo Revengers)","Madara (Naruto)"],
+    ["Smiley (Tokyo Revengers)","Toga Himiko (My Hero Academia)"],
+    ["Ran (Tokyo Revengers)","Doflamingo (One Piece)"],
+    ["Rindo (Tokyo Revengers)","Grimmjow (Bleach)"],
+    ["Haruchiyo Sanzu (Tokyo Revengers)","Dabi (My Hero Academia)"],
+    ["South Terano (Tokyo Revengers)","Kaido (One Piece)"],
+    ["Mikey (Tokyo Revengers)","Eren Yeager (Attaque des Titans)"],
   ],
 
   // ═══════════════════════════════
@@ -1169,62 +1170,62 @@ const DB = {
   // ═══════════════════════════════
 
   "Marvel": [
-    ["Spider-Man","Miles Morales"],            // même araignée, quartiers différents
-    ["Peter Parker","Deku"],                   // ados maladroits responsabilité sur les épaules
-    ["Iron Man","Batman"],                     // milliardaires géniaux sans superpouvoir
-    ["Iron Man","Homelander"],                 // ego de héros qui n'aiment que se regarder
-    ["Captain America","Homelander"],          // soldats parfaits, valeurs inverses
-    ["Captain America","Soldier Boy"],         // soldats du même moule, époques différentes
-    ["Thor","Goku"],                           // dieux guerriers adorent se battre
-    ["Wolverine","Levi Ackerman"],             // petits, silencieux, lames, les meilleurs
-    ["Hulk","Broly"],                          // colossaux verts incontrôlables
-    ["Hulk","Garou"],                          // monstres de colère au fond gentils
-    ["Thanos","Madara"],                       // idéologues puissants au plan grandiose
-    ["Thanos","Frieza"],                       // tyrans galactiques obsédés par la puissance
-    ["Deadpool","Hisoka"],                     // fous drôles violents qui brisent le quatrième mur
-    ["Deadpool","Joker"],                      // chaotiques imprévisibles qui rigolent
-    ["Scarlet Witch","Tatsumaki"],             // femmes aux pouvoirs psychiques déstabilisants
-    ["Magneto","Stain"],                       // vilains avec idéologie, pas juste méchants
-    ["Venom","Ichigo"],                        // hôtes fusionnés à une entité sombre
-    ["Black Widow","Mikasa Ackerman"],         // soldates froides parfaitement entraînées
+    ["Spider-Man (Marvel)","Miles Morales (Marvel)"],
+    ["Peter Parker (Marvel)","Deku (My Hero Academia)"],
+    ["Iron Man (Marvel)","Batman (DC)"],
+    ["Iron Man (Marvel)","Homelander (The Boys)"],
+    ["Captain America (Marvel)","Homelander (The Boys)"],
+    ["Captain America (Marvel)","Soldier Boy (The Boys)"],
+    ["Thor (Marvel)","Goku (Dragon Ball)"],
+    ["Wolverine (Marvel)","Levi Ackerman (Attaque des Titans)"],
+    ["Hulk (Marvel)","Broly (Dragon Ball)"],
+    ["Hulk (Marvel)","Garou (One Punch Man)"],
+    ["Thanos (Marvel)","Madara (Naruto)"],
+    ["Thanos (Marvel)","Frieza (Dragon Ball)"],
+    ["Deadpool (Marvel)","Hisoka (Hunter x Hunter)"],
+    ["Deadpool (Marvel)","Joker (DC)"],
+    ["Scarlet Witch (Marvel)","Tatsumaki (One Punch Man)"],
+    ["Magneto (Marvel)","Stain (My Hero Academia)"],
+    ["Venom (Marvel)","Ichigo (Bleach)"],
+    ["Black Widow (Marvel)","Mikasa Ackerman (Attaque des Titans)"],
   ],
 
   "DC": [
-    ["Superman","Homelander"],                 // super-hommes parfaits, valeurs inverses
-    ["Superman","Goku"],                       // aliens bienveillants quasi invincibles
-    ["Superman","All Might"],                  // symboles d'espoir infaillibles
-    ["Batman","Iron Man"],                     // milliardaires géniaux sans superpouvoir
-    ["Batman","Levi Ackerman"],                // stratèges obsessionnels à la force pure
-    ["Joker","Hisoka"],                        // chaos pour le chaos, jeu mortel
-    ["Joker","Ryuk"],                          // catalyseurs du chaos qui observent en riant
-    ["The Flash","A-Train"],                   // couriers rapides, drogues différentes
-    ["Wonder Woman","Erza Scarlet"],           // guerrières en armure légendaires
-    ["Lex Luthor","Light Yagami"],             // intellects qui veulent être dieux
-    ["Deathstroke","Levi Ackerman"],           // mercenaires parfaits aux réflexes surhumains
-    ["Aquaman","The Deep"],                    // rois des mers sous-estimés, atlantiques
-    ["Shazam","Deku"],                         // gamins avec pouvoirs de dieux
-    ["Nightwing","Zoro"],                      // bras droits qui surpassent leur maître
+    ["Superman (DC)","Homelander (The Boys)"],
+    ["Superman (DC)","Goku (Dragon Ball)"],
+    ["Superman (DC)","All Might (My Hero Academia)"],
+    ["Batman (DC)","Iron Man (Marvel)"],
+    ["Batman (DC)","Levi Ackerman (Attaque des Titans)"],
+    ["Joker (DC)","Hisoka (Hunter x Hunter)"],
+    ["Joker (DC)","Ryuk (Death Note)"],
+    ["The Flash (DC)","A-Train (The Boys)"],
+    ["Wonder Woman (DC)","Erza Scarlet (Fairy Tail)"],
+    ["Lex Luthor (DC)","Light Yagami (Death Note)"],
+    ["Deathstroke (DC)","Levi Ackerman (Attaque des Titans)"],
+    ["Aquaman (DC)","The Deep (The Boys)"],
+    ["Shazam (DC)","Deku (My Hero Academia)"],
+    ["Nightwing (DC)","Zoro (One Piece)"],
   ],
 
   "The Boys": [
-    ["Homelander","Superman"],                 // mêmes pouvoirs, valeurs inversées
-    ["Homelander","Vegeta"],                   // supériorité raciale, ego blessé fragile
-    ["Homelander","All Might"],                // façade de héros, intérieur brisé
-    ["Soldier Boy","Captain America"],         // soldats dopés de la même époque, même look
-    ["Soldier Boy","Homelander"],              // pères et fils supers aux valeurs toxiques
-    ["Starlight","Captain America"],           // héros sincères étouffés par le système
-    ["Starlight","Deku"],                      // idéalistes refusant de céder à la corruption
-    ["A-Train","The Flash"],                   // coureurs rapides dopés, déclin similaire
-    ["A-Train","Quicksilver"],                 // mêmes pouvoirs de vitesse éclair
-    ["The Deep","Aquaman"],                    // rois des mers humiliés, même look
-    ["Black Noir","Batman"],                   // silencieux masqués aux capacités physiques folles
-    ["Queen Maeve","Wonder Woman"],            // guerrières puissantes étouffées par le système
-    ["Queen Maeve","Brienne de Torth"],        // femmes guerrières rejetées par leur monde
-    ["Butcher","Levi Ackerman"],               // haine des supers/titans, efficacité totale
-    ["Butcher","John Wick"],                   // hommes brisés par la perte qui tuent tout
-    ["Kimiko","Mikasa Ackerman"],              // combattantes silencieuses surpuissantes
-    ["Frenchie","Deadpool"],                   // bavards drôles violents aux répliques cultes
-    ["Ryan","Homelander"],                     // enfants de super héros écrasés par l'héritage
+    ["Homelander (The Boys)","Superman (DC)"],
+    ["Homelander (The Boys)","Vegeta (Dragon Ball)"],
+    ["Homelander (The Boys)","All Might (My Hero Academia)"],
+    ["Soldier Boy (The Boys)","Captain America (Marvel)"],
+    ["Soldier Boy (The Boys)","Homelander (The Boys)"],
+    ["Starlight (The Boys)","Captain America (Marvel)"],
+    ["Starlight (The Boys)","Deku (My Hero Academia)"],
+    ["A-Train (The Boys)","The Flash (DC)"],
+    ["A-Train (The Boys)","Quicksilver (Marvel)"],
+    ["The Deep (The Boys)","Aquaman (DC)"],
+    ["Black Noir (The Boys)","Batman (DC)"],
+    ["Queen Maeve (The Boys)","Wonder Woman (DC)"],
+    ["Queen Maeve (The Boys)","Brienne de Torth (Game of Thrones)"],
+    ["Butcher (The Boys)","Levi Ackerman (Attaque des Titans)"],
+    ["Butcher (The Boys)","John Wick (Films cultes)"],
+    ["Kimiko (The Boys)","Mikasa Ackerman (Attaque des Titans)"],
+    ["Frenchie (The Boys)","Deadpool (Marvel)"],
+    ["Ryan (The Boys)","Homelander (The Boys)"],
   ],
 
   // ═══════════════════════════════
@@ -1232,87 +1233,87 @@ const DB = {
   // ═══════════════════════════════
 
   "Star Wars": [
-    ["Luke Skywalker","Harry Potter"],         // orphelins choisis par la prophétie
-    ["Anakin Skywalker","Eren Yeager"],        // héros qui basculent dans l'obscurité
-    ["Darth Vader","Sauron"],                  // masques noirs, voix profondes, empires
-    ["Darth Vader","Thanos"],                  // pères terrifiants qui veulent sauver en détruisant
-    ["Yoda","Iroh"],                           // petits vieux sages espiègles, thé et sagesse
-    ["Palpatine","Voldemort"],                 // maîtres de l'ombre qui manipulent depuis l'arrière
-    ["Mandalorian","Geralt de Riv"],           // guerriers solitaires qui adoptent un enfant
-    ["Boba Fett","Deathstroke"],               // chasseurs de primes légendaires mercenaires
-    ["Obi-Wan","Dumbledore"],                  // mentors qui meurent volontairement
-    ["Rey","Daenerys"],                        // héroïnes à la puissance héritée incontrôlable
-    ["Han Solo","Jack Sparrow"],               // contrebandiers charismatiques sans morale fixe
-    ["Ahsoka","Mikasa Ackerman"],              // protégées qui surpassent leur maître
+    ["Luke Skywalker (Star Wars)","Harry Potter (Harry Potter)"],
+    ["Anakin Skywalker (Star Wars)","Eren Yeager (Attaque des Titans)"],
+    ["Darth Vader (Star Wars)","Sauron (Films cultes)"],
+    ["Darth Vader (Star Wars)","Thanos (Marvel)"],
+    ["Yoda (Star Wars)","Iroh (Films cultes)"],
+    ["Palpatine (Star Wars)","Voldemort (Harry Potter)"],
+    ["Mandalorian (Star Wars)","Geralt de Riv (Jeux Video)"],
+    ["Boba Fett (Star Wars)","Deathstroke (DC)"],
+    ["Obi-Wan (Star Wars)","Dumbledore (Harry Potter)"],
+    ["Rey (Star Wars)","Daenerys (Game of Thrones)"],
+    ["Han Solo (Star Wars)","Jack Sparrow (Films cultes)"],
+    ["Ahsoka (Star Wars)","Mikasa Ackerman (Attaque des Titans)"],
   ],
 
   "Harry Potter": [
-    ["Harry Potter","Luke Skywalker"],         // orphelins choisis par la prophétie
-    ["Hermione Granger","Armin Arlert"],       // génies qui sauvent par la connaissance
-    ["Dumbledore","Gandalf"],                  // vieux mages sages aux secrets profonds
-    ["Dumbledore","Yoda"],                     // guides lumineux qui cachent leur vraie force
-    ["Voldemort","Palpatine"],                 // maîtres de l'ombre corrompus par la peur de mort
-    ["Voldemort","Muzan"],                     // immortels terrifiés par la mort
-    ["Draco Malfoy","Zuko"],                   // fils de familles puissantes au côté obscur
-    ["Sirius Black","Remus Lupin"],            // amis loyaux marqués par la trahison
-    ["Bellatrix Lestrange","Azula"],           // femmes dangereuses fanatiques de leur maître
-    ["Snape","Itachi"],                        // traîtres apparents qui sacrifient tout en secret
-    ["Neville Londubat","Rock Lee"],           // sous-estimés qui prouvent leur valeur
+    ["Harry Potter (Harry Potter)","Luke Skywalker (Star Wars)"],
+    ["Hermione Granger (Harry Potter)","Armin Arlert (Attaque des Titans)"],
+    ["Dumbledore (Harry Potter)","Gandalf (Films cultes)"],
+    ["Dumbledore (Harry Potter)","Yoda (Star Wars)"],
+    ["Voldemort (Harry Potter)","Palpatine (Star Wars)"],
+    ["Voldemort (Harry Potter)","Muzan (Demon Slayer)"],
+    ["Draco Malfoy (Harry Potter)","Zuko (Films cultes)"],
+    ["Sirius Black (Harry Potter)","Remus Lupin (Harry Potter)"],
+    ["Bellatrix Lestrange (Harry Potter)","Azula (Films cultes)"],
+    ["Snape (Harry Potter)","Itachi (Naruto)"],
+    ["Neville Londubat (Harry Potter)","Rock Lee (Naruto)"],
   ],
 
   "Game of Thrones": [
-    ["Jon Snow","Naruto"],                     // bâtards déterminés à prouver leur valeur
-    ["Daenerys","Eren Yeager"],                // libérateurs qui deviennent tyrans
-    ["Daenerys","Azula"],                      // reines au pouvoir du feu qui sombrent
-    ["Cersei","Lady Macbeth"],                 // reines machiavéliques qui sacrifient tout
-    ["Tyrion Lannister","L"],                  // intellects sous-estimés par leur apparence
-    ["Arya Stark","Mikasa Ackerman"],          // filles qui tuent mieux que les hommes
-    ["Arya Stark","Killua Zoldyck"],           // assassins entraînés depuis l'enfance
-    ["Joffrey Baratheon","Shigaraki"],         // enfants rois sadiques sans empathie
-    ["Littlefinger","Kisaki Tetta"],           // manipulateurs de l'ombre aux plans longs
-    ["The Hound","Levi Ackerman"],             // brutaux protecteurs à contrecœur
-    ["Jaime Lannister","Zuko"],                // anti-héros au bras perdu qui cherchent rédemption
-    ["Ramsay Bolton","Mahito"],                // sadiques purs qui infligent la souffrance
+    ["Jon Snow (Game of Thrones)","Naruto (Naruto)"],
+    ["Daenerys (Game of Thrones)","Eren Yeager (Attaque des Titans)"],
+    ["Daenerys (Game of Thrones)","Azula (Films cultes)"],
+    ["Cersei (Game of Thrones)","Lady Macbeth (Films cultes)"],
+    ["Tyrion Lannister (Game of Thrones)","L (Death Note)"],
+    ["Arya Stark (Game of Thrones)","Mikasa Ackerman (Attaque des Titans)"],
+    ["Arya Stark (Game of Thrones)","Killua Zoldyck (Hunter x Hunter)"],
+    ["Joffrey Baratheon (Game of Thrones)","Shigaraki (My Hero Academia)"],
+    ["Littlefinger (Game of Thrones)","Kisaki Tetta (Tokyo Revengers)"],
+    ["The Hound (Game of Thrones)","Levi Ackerman (Attaque des Titans)"],
+    ["Jaime Lannister (Game of Thrones)","Zuko (Films cultes)"],
+    ["Ramsay Bolton (Game of Thrones)","Mahito (Jujutsu Kaisen)"],
   ],
 
   "Breaking Bad": [
-    ["Walter White","Light Yagami"],           // hommes ordinaires qui se croient des dieux
-    ["Walter White","Macbeth"],                // hommes corrompus par l'ambition et l'orgueil
-    ["Jesse Pinkman","Naruto"],                // cœurs bons dans des mondes qui les brisent
-    ["Gus Fring","Aizen"],                     // façades parfaites cachant une froide violence
-    ["Saul Goodman","Jack Sparrow"],           // escrocs retors drôles à la loyauté floue
-    ["Lalo Salamanca","Doflamingo"],           // élégants souriants et absolument terrifiants
-    ["Mike Ehrmantraut","Levi Ackerman"],      // soldats silencieux qui font le sale boulot
-    ["Hank Schrader","Erwin Smith"],           // enquêteurs déterminés face à un mur d'obstacles
+    ["Walter White (Breaking Bad)","Light Yagami (Death Note)"],
+    ["Walter White (Breaking Bad)","Macbeth (Films cultes)"],
+    ["Jesse Pinkman (Breaking Bad)","Naruto (Naruto)"],
+    ["Gus Fring (Breaking Bad)","Aizen (Bleach)"],
+    ["Saul Goodman (Breaking Bad)","Jack Sparrow (Films cultes)"],
+    ["Lalo Salamanca (Breaking Bad)","Doflamingo (One Piece)"],
+    ["Mike Ehrmantraut (Breaking Bad)","Levi Ackerman (Attaque des Titans)"],
+    ["Hank Schrader (Breaking Bad)","Erwin Smith (Attaque des Titans)"],
   ],
 
   "Films cultes": [
-    ["John Wick","Levi Ackerman"],             // meilleurs combattants de leur monde, obsessionnels
-    ["John Wick","Butcher"],                   // hommes brisés par la perte qui tuent tout
-    ["Tyler Durden","Light Yagami"],           // idéologues charismatiques qui veulent tout brûler
-    ["Joker","Ryuk"],                          // catalyseurs de chaos qui regardent en souriant
-    ["Hannibal Lecter","Aizen"],               // intellects sophistiqués qui manipulent les autres
-    ["Gandalf","Dumbledore"],                  // vieux mages barbus guides des héros
-    ["Frodo Baggins","Deku"],                  // petits normaux qui portent un fardeau énorme
-    ["Terminator","Broly"],                    // machines à tuer invulnérables sans émotion
-    ["Leonidas","Levi Ackerman"],              // guerriers ultimes qui protègent les leurs
-    ["Jack Sparrow","Luffy"],                  // pirates charismatiques imprévisibles et libres
-    ["Neo","Aang"],                            // élus qui refusent puis acceptent leur destin
-    ["Patrick Bateman","Light Yagami"],        // façades parfaites cachant une violence froide
-    ["The Terminator","Robocop"],              // machines à l'humanité effacée au service de la loi
-    ["Anton Chigurh","Hisoka"],                // tueurs philosophes qui font du hasard un jeu
+    ["John Wick (Films cultes)","Levi Ackerman (Attaque des Titans)"],
+    ["John Wick (Films cultes)","Butcher (The Boys)"],
+    ["Tyler Durden (Films cultes)","Light Yagami (Death Note)"],
+    ["Joker (DC)","Ryuk (Death Note)"],
+    ["Hannibal Lecter (Films cultes)","Aizen (Bleach)"],
+    ["Gandalf (Films cultes)","Dumbledore (Harry Potter)"],
+    ["Frodo Baggins (Films cultes)","Deku (My Hero Academia)"],
+    ["Terminator (Films cultes)","Broly (Dragon Ball)"],
+    ["Leonidas (Films cultes)","Levi Ackerman (Attaque des Titans)"],
+    ["Jack Sparrow (Films cultes)","Luffy (One Piece)"],
+    ["Neo (Films cultes)","Aang (Films cultes)"],
+    ["Patrick Bateman (Films cultes)","Light Yagami (Death Note)"],
+    ["The Terminator (Films cultes)","Robocop (Films cultes)"],
+    ["Anton Chigurh (Films cultes)","Hisoka (Hunter x Hunter)"],
   ],
 
   "Disney / Pixar": [
-    ["Elsa","Tatsumaki"],                      // puissantes incomprises qui s'isolent
-    ["Simba","Eren Yeager"],                   // fils du roi qui fuient puis reviennent pour tout
-    ["Maléfique","Medusa"],                    // sorcières trahies qui deviennent les vilaines
-    ["Gaston","Homelander"],                   // narcissiques puissants adorés des foules
-    ["Scar","Aizen"],                          // frères manipulateurs qui planifient dans l'ombre
-    ["Buzz Eclair","All Might"],               // héros parfaits qui découvrent leurs limites
-    ["Woody","Naruto"],                        // leaders anxieux à la loyauté absolue
-    ["Stitch","Inosuke"],                      // sauvages incompris au grand cœur caché
-    ["Moana","Daenerys"],                      // princesses choisies par leur héritage et la mer
+    ["Elsa (Disney / Pixar)","Tatsumaki (One Punch Man)"],
+    ["Simba (Disney / Pixar)","Eren Yeager (Attaque des Titans)"],
+    ["Maléfique (Disney / Pixar)","Medusa (Films cultes)"],
+    ["Gaston (Disney / Pixar)","Homelander (The Boys)"],
+    ["Scar (Disney / Pixar)","Aizen (Bleach)"],
+    ["Buzz Eclair (Disney / Pixar)","All Might (My Hero Academia)"],
+    ["Woody (Disney / Pixar)","Naruto (Naruto)"],
+    ["Stitch (Disney / Pixar)","Inosuke (Demon Slayer)"],
+    ["Moana (Disney / Pixar)","Daenerys (Game of Thrones)"],
   ],
 
   // ═══════════════════════════════
@@ -1320,24 +1321,24 @@ const DB = {
   // ═══════════════════════════════
 
   "Jeux Video": [
-    ["Kratos","Levi Ackerman"],                // meilleurs guerriers, voix de gravier, fils
-    ["Kratos","Guts"],                         // hommes brisés par les dieux qui tuent des dieux
-    ["Geralt de Riv","Levi Ackerman"],         // chasseurs de monstres froids aux répliques sèches
-    ["Geralt de Riv","Mandalorian"],           // guerriers solitaires avec enfant adopté
-    ["Joel","Walter White"],                   // pères qui franchissent la ligne rouge pour leur enfant
-    ["Arthur Morgan","Jon Snow"],              // hommes d'honneur rattrapés par leur passé
-    ["Cloud Strife","Sasuke"],                 // épéistes sombres à la grande épée et trauma
-    ["Sephiroth","Madara"],                    // antagonistes absolus au charisme immense
-    ["Solid Snake","Levi Ackerman"],           // soldats parfaits épuisés par trop de guerres
-    ["Master Chief","Iron Man"],               // guerriers en armure symboles de l'humanité
-    ["Link","Frodo Baggins"],                  // petits héros silencieux qui portent une quête épique
-    ["Dante","Deadpool"],                      // démonistes sarcastiques qui ne meurent jamais
-    ["Jinx","Harley Quinn"],                   // folles aux tresses bleues et chaos coloré
-    ["Vi","Levi Ackerman"],                    // combattantes poings experts sans merci
-    ["Leon Kennedy","Levi Ackerman"],          // soldats parfaits face à des monstres
-    ["Aloy","Mikasa Ackerman"],                // chasseuses déterminées dans un monde hostile
-    ["2B","Mikasa Ackerman"],                  // androïdes/soldates froides au service de leur clan
-    ["Ellie","Arya Stark"],                    // jeunes filles qui apprennent à tuer pour survivre
+    ["Kratos (Jeux Video)","Levi Ackerman (Attaque des Titans)"],
+    ["Kratos (Jeux Video)","Guts (Films cultes)"],
+    ["Geralt de Riv (Jeux Video)","Levi Ackerman (Attaque des Titans)"],
+    ["Geralt de Riv (Jeux Video)","Mandalorian (Star Wars)"],
+    ["Joel (Jeux Video)","Walter White (Breaking Bad)"],
+    ["Arthur Morgan (Jeux Video)","Jon Snow (Game of Thrones)"],
+    ["Cloud Strife (Jeux Video)","Sasuke (Naruto)"],
+    ["Sephiroth (Jeux Video)","Madara (Naruto)"],
+    ["Solid Snake (Jeux Video)","Levi Ackerman (Attaque des Titans)"],
+    ["Master Chief (Jeux Video)","Iron Man (Marvel)"],
+    ["Link (Jeux Video)","Frodo Baggins (Films cultes)"],
+    ["Dante (Jeux Video)","Deadpool (Marvel)"],
+    ["Jinx (Jeux Video)","Harley Quinn (DC)"],
+    ["Vi (Jeux Video)","Levi Ackerman (Attaque des Titans)"],
+    ["Leon Kennedy (Jeux Video)","Levi Ackerman (Attaque des Titans)"],
+    ["Aloy (Jeux Video)","Mikasa Ackerman (Attaque des Titans)"],
+    ["2B (Jeux Video)","Mikasa Ackerman (Attaque des Titans)"],
+    ["Ellie (Jeux Video)","Arya Stark (Game of Thrones)"],
   ],
 };
 
@@ -1578,9 +1579,22 @@ function startGame(){
   }
 
   // Pick a word pair from selected categories
-  const availCats=Array.from(state.selectedCats).filter(c=>DB[c]);
-  const cat=rand(availCats);
-  const pair=rand(DB[cat]);
+  let validPairs = [];
+  for (const cat of Object.keys(DB)) {
+    for (const pair of DB[cat]) {
+      const u1 = pair[0].match(/\(([^)]+)\)$/)?.[1];
+      const u2 = pair[1].match(/\(([^)]+)\)$/)?.[1];
+      if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
+        validPairs.push(pair);
+      }
+    }
+  }
+  if (validPairs.length === 0) {
+    document.getElementById('cats-error').classList.add('show');
+    toast('Aucune paire valide avec ces catégories', 'warning');
+    return;
+  }
+  const pair = rand(validPairs);
   const flip=Math.random()<.5;
   state.civilWord=flip?pair[0]:pair[1];
   state.undercoverWord=flip?pair[1]:pair[0];
@@ -1711,23 +1725,28 @@ function renderGameScreen(){
 }
 
 // ── Chrono ────────────────────────────────────────────────────────────
+let _csDelayTimer = null;
 function csResetChrono(){
+  if(_chronoTimer) clearInterval(_chronoTimer);
+  clearTimeout(_csDelayTimer);
   _chronoSec = CHRONO_DURATION;
-  document.getElementById('cs-time').textContent = CHRONO_DURATION;
+  document.getElementById('cs-time').textContent = 'Prêt ?';
   document.getElementById('cs-time').className = 'cs-time';
   const bar = document.getElementById('cs-ring-bar');
   bar.style.strokeDashoffset = '0';
   bar.setAttribute('class','cs-ring-bar');
-  document.getElementById('cs-start-wrap').style.display = 'block';
+  document.getElementById('cs-start-wrap').style.display = 'none';
   document.getElementById('cs-pass-wrap').style.display  = 'none';
+  _csDelayTimer = setTimeout(csStart, 3000);
 }
 
 function csStart(){
   SFX.start();
   document.getElementById('cs-start-wrap').style.display = 'none';
   document.getElementById('cs-pass-wrap').style.display  = 'block';
-  csTickChrono();
+  if(_chronoTimer) clearInterval(_chronoTimer);
   _chronoTimer = setInterval(csTickChrono, 1000);
+  csTickChrono();
 }
 
 function csTickChrono(){
@@ -2403,10 +2422,22 @@ async function olHostStart(){
   roleErr.classList.remove('show');
 
   // Choisir paire de mots
-  const cats=[...state.selectedCats].filter(c=>DB[c]);
-  if(!cats.length){ toast('❌ Sélectionne une catégorie'); return; }
-  const cat=cats[Math.floor(Math.random()*cats.length)];
-  const pair=DB[cat][Math.floor(Math.random()*DB[cat].length)];
+  let validPairs = [];
+  for (const cat of Object.keys(DB)) {
+    for (const p of DB[cat]) {
+      const u1 = p[0].match(/\(([^)]+)\)$/)?.[1];
+      const u2 = p[1].match(/\(([^)]+)\)$/)?.[1];
+      if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
+        validPairs.push(p);
+      }
+    }
+  }
+  if (!validPairs.length) { 
+    toast('❌ Sélectionne plus de catégories (aucune paire valide)'); 
+    if(startBtn){ startBtn.textContent='🚀 LANCER LA PARTIE'; startBtn.disabled=false; }
+    return; 
+  }
+  const pair = validPairs[Math.floor(Math.random() * validPairs.length)];
   const flip=Math.random()<.5;
   const civilWord=flip?pair[0]:pair[1];
   const undercoverWord=flip?pair[1]:pair[0];
@@ -2513,6 +2544,7 @@ let _olChronoTimer = null;
 let _olChronoSec   = 60;
 
 function olCsResetChrono(){
+  if(_olChronoTimer) clearInterval(_olChronoTimer);
   _olChronoSec = 60;
   const timeEl = document.getElementById('ol-cs-time');
   const bar    = document.getElementById('ol-cs-ring-bar');
@@ -2644,9 +2676,10 @@ function olRenderTalk(room, alive){
   if(isMyTurn && !_olChronoTimer){
     OL._passLocked = false; // reset verrou pour le nouveau tour
     olCsResetChrono();
-    startWrap.style.display = 'block';
-    passWrap.style.display  = 'none';
+    startWrap.style.display = 'none';
+    passWrap.style.display  = 'block';
     if(waitMsg) waitMsg.textContent = '';
+    olCsStart();
   } else if(!isMyTurn){
     startWrap.style.display = 'none';
     passWrap.style.display  = 'none';
@@ -2923,6 +2956,38 @@ async function onRejouer(){
   if(OL.roomCode && !OL.isHost){
     // Les non-hôtes attendent que l'hôte relance
     OL.voteSubmitted=false; _pollFailCount=0; _olSelectedVote=-1;
+    OL._lastElimTarget=-99; OL._elimTarget=-1; OL._passLocked=false;
+    if(_olChronoTimer){ clearInterval(_olChronoTimer); _olChronoTimer=null; }
+    showScreen('screen-ol-wait');
+    return;
+  }
+  
+  if(!OL.roomCode){
+    // Hors ligne → retour écran setup avec joueurs actuels (reset partiel) ou relancer direct
+    startGame();
+  }
+}
+
+async function olReRevealCard() {
+  const room = await olRead(OL.roomCode);
+  if(!room) return;
+  const asgn = room.assignments[OL.myIndex];
+  if(asgn.role === 'mrwhite') {
+    showModal('🎭 Ton rôle', '<div style="font-size:1.1rem;text-align:center;padding:10px 0;">Tu es <b>Mr White</b> 🤍<br>Tu ne connais pas le mot, bluffe !</div>', [{label:'Fermer', cls:'btn-primary'}]);
+  } else {
+    showModal('🎭 Ton personnage', `<div style="font-size:1.1rem;text-align:center;padding:10px 0;">Ton personnage est :<br><b style="color:var(--g);font-size:1.3rem">${escHtml(asgn.word)}</b></div>`, [{label:'Fermer', cls:'btn-primary'}]);
+  }
+}
+
+async function olHostRestartGame() {
+  showModal('🔄 Relancer ?', 'Relancer une nouvelle partie avec les joueurs actuels ?', [
+    {label:'Annuler', cls:'btn-ghost'},
+    {label:'Relancer', cls:'btn-primary', fn: async () => {
+      onRejouer();
+      setTimeout(olHostStart, 500); // Relance automatiquement après reset
+    }}
+  ]);
+}
     OL._lastElimTarget=-99;
     // Relancer le poll s'il était stoppé
     if(!OL.pollTimer) olStartPoll();
@@ -3201,7 +3266,11 @@ init();
   </div>
   <div class="game-topbar">
     <div class="game-round-badge" id="ol-round-badge">TOUR 1</div>
-    <div class="game-alive-count" id="ol-alive-count">-</div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn btn-ghost btn-sm" onclick="olReRevealCard()" style="width:auto;padding:6px;font-size:1rem" title="Voir mon personnage">👁️</button>
+      <button class="btn btn-ghost btn-sm" onclick="olHostRestartGame()" id="ol-btn-restart" style="width:auto;padding:6px;font-size:1.1rem" title="Relancer la partie">🔄</button>
+      <div class="game-alive-count" id="ol-alive-count">-</div>
+    </div>
   </div>
   <div class="divider" style="margin:0 0 10px"></div>
 
