@@ -3713,8 +3713,8 @@
       room.numUndercover = OL.numUndercover;
       room.numMrWhite = OL.numMrWhite;
       room.elimTarget = -1;
-      // L'hôte (index 0) est automatiquement ready — il ne voit pas de carte
-      room.players = room.players.map((p, i) => ({ ...p, alive: true, ready: i === 0, voted: false, vote: null }));
+      // L'hôte (index 0) n'est plus auto-ready — il doit voir sa carte
+      room.players = room.players.map((p, i) => ({ ...p, alive: true, ready: false, voted: false, vote: null }));
 
       const ok = await olWrite(OL.roomCode, room);
       if (startBtn) { startBtn.textContent = '🚀 LANCER LA PARTIE'; startBtn.disabled = false; }
@@ -3813,8 +3813,8 @@
     }
 
     function olCsTick() {
-      _olChronoSec--;
-      if (_olChronoSec < 0) _olChronoSec = 0;
+      const elapsed = Math.floor((Date.now() - (OL._turnStartTs || Date.now())) / 1000);
+      _olChronoSec = Math.max(0, 60 - elapsed);
       const timeEl = document.getElementById('ol-cs-time');
       const bar = document.getElementById('ol-cs-ring-bar');
       if (!timeEl) return;
@@ -3830,9 +3830,12 @@
         timeEl.className = 'cs-time warn';
         bar.setAttribute('class', 'cs-ring-bar warn');
         SFX.tick();
+      } else {
+        timeEl.className = 'cs-time';
+        bar.setAttribute('class', 'cs-ring-bar');
       }
       if (_olChronoSec === 0) {
-        clearInterval(_olChronoTimer); _olChronoTimer = null;
+        if (_olChronoTimer) { clearInterval(_olChronoTimer); _olChronoTimer = null; }
         SFX.timesUp();
         if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
         toast('⏰ Temps écoulé !', 'warning');
@@ -3924,23 +3927,25 @@
 
       const turnKey = room.round + '-' + speakerIdx;
 
+      if (OL._lastTurnKey !== turnKey) {
+        OL._lastTurnKey = turnKey;
+        OL._passLocked = false;
+        OL._turnStartTs = room.ts || Date.now();
+        
+        if (_olChronoTimer) clearInterval(_olChronoTimer);
+        _olChronoTimer = setInterval(olCsTick, 1000);
+        
+        if (isMyTurn && (Date.now() - OL._turnStartTs < 2000)) {
+          SFX.start();
+        }
+        olCsTick(); // initial tick
+      }
+
       if (isMyTurn) {
-        if (OL._lastTurnKey !== turnKey) {
-          OL._lastTurnKey = turnKey;
-          OL._passLocked = false;
-          olCsResetChrono();
-          startWrap.style.display = 'none';
-          passWrap.style.display = 'block';
-          if (waitMsg) waitMsg.textContent = '';
-          olCsStart(); // Auto-start once per turn
-        }
-        // If timer hit 0, _olChronoTimer is null but _lastTurnKey is still turnKey
-        // So we don't auto-start again, but we make sure passWrap is visible
-        if (!_olChronoTimer && _olChronoSec === 0) {
-          passWrap.style.display = 'block';
-        }
+        startWrap.style.display = 'none';
+        passWrap.style.display = 'block';
+        if (waitMsg) waitMsg.textContent = '';
       } else {
-        OL._lastTurnKey = null; // reset for next time it becomes our turn
         startWrap.style.display = 'none';
         passWrap.style.display = 'none';
         if (waitMsg) waitMsg.textContent = `C'est au tour de ${currentPlayer ? currentPlayer.name : ''}…`;
