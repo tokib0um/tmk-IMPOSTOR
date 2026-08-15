@@ -2428,383 +2428,123 @@
     };
 
     const DB = {
-
-      // ═══════════════════════════════
-      // ANIMÉ
-      // ═══════════════════════════════
-
-      "One Piece": [
-        ["Luffy (One Piece)", "Naruto (Naruto)"],
-        ["Luffy (One Piece)", "Goku (Dragon Ball)"],
-        ["Zoro (One Piece)", "Levi Ackerman (Attaque des Titans)"],
-        ["Zoro (One Piece)", "Sasuke (Naruto)"],
-        ["Ace (One Piece)", "Rengoku (Demon Slayer)"],
-        ["Shanks (One Piece)", "Whitebeard (One Piece)"],
-        ["Mihawk (One Piece)", "Zoro (One Piece)"],
-        ["Kaido (One Piece)", "Broly (Dragon Ball)"],
-        ["Nami (One Piece)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["Robin (One Piece)", "Rukia (Bleach)"],
-        ["Doflamingo (One Piece)", "Aizen (Bleach)"],
-        ["Sanji (One Piece)", "Rock Lee (Naruto)"],
-        ["Law (One Piece)", "Sasuke (Naruto)"],
-        ["Luffy (One Piece)", "Tanjiro (Demon Slayer)"],
-        ["Big Mom (One Piece)", "Kaguya (Naruto)"],
-        ["Garp (One Piece)", "Netero (Hunter x Hunter)"],
-      ],
-
-      "Naruto": [
-        ["Naruto (Naruto)", "Luffy (One Piece)"],
-        ["Naruto (Naruto)", "Deku (My Hero Academia)"],
-        ["Naruto (Naruto)", "Goku (Dragon Ball)"],
-        ["Sasuke (Naruto)", "Zuko (Films cultes)"],
-        ["Sasuke (Naruto)", "Levi Ackerman (Attaque des Titans)"],
-        ["Itachi (Naruto)", "Aizen (Bleach)"],
-        ["Kakashi (Naruto)", "Byakuya (Bleach)"],
-        ["Pain (Naruto)", "Thanos (Marvel)"],
-        ["Madara (Naruto)", "All For One (My Hero Academia)"],
-        ["Jiraiya (Naruto)", "All Might (My Hero Academia)"],
-        ["Orochimaru (Naruto)", "Aizen (Bleach)"],
-        ["Rock Lee (Naruto)", "Might Guy (Naruto)"],
-        ["Gaara (Naruto)", "Kaneki Ken (Films cultes)"],
-        ["Shikamaru (Naruto)", "L (Death Note)"],
-        ["Hinata (Naruto)", "Ochaco (My Hero Academia)"],
-      ],
-
-      "Jujutsu Kaisen": [
-        ["Gojo (Jujutsu Kaisen)", "Aizen (Bleach)"],
-        ["Gojo (Jujutsu Kaisen)", "All Might (My Hero Academia)"],
-        ["Sukuna (Jujutsu Kaisen)", "Madara (Naruto)"],
-        ["Sukuna (Jujutsu Kaisen)", "Muzan (Demon Slayer)"],
-        ["Yuji (Jujutsu Kaisen)", "Tanjiro (Demon Slayer)"],
-        ["Yuji (Jujutsu Kaisen)", "Naruto (Naruto)"],
-        ["Megumi (Jujutsu Kaisen)", "Sasuke (Naruto)"],
-        ["Mahito (Jujutsu Kaisen)", "Dabi (My Hero Academia)"],
-        ["Nobara (Jujutsu Kaisen)", "Maki Zenin (Jujutsu Kaisen)"],
-        ["Kenjaku (Jujutsu Kaisen)", "Orochimaru (Naruto)"],
-        ["Yuta (Jujutsu Kaisen)", "Ichigo (Bleach)"],
-        ["Toji (Jujutsu Kaisen)", "Levi Ackerman (Attaque des Titans)"],
-      ],
-
-      "Dragon Ball": [
-        ["Goku (Dragon Ball)", "Naruto (Naruto)"],
-        ["Goku (Dragon Ball)", "Luffy (One Piece)"],
-        ["Goku (Dragon Ball)", "Saitama (One Punch Man)"],
-        ["Goku (Dragon Ball)", "Superman (DC)"],
-        ["Vegeta (Dragon Ball)", "Sasuke (Naruto)"],
-        ["Vegeta (Dragon Ball)", "Homelander (The Boys)"],
-        ["Broly (Dragon Ball)", "Hulk (Marvel)"],
-        ["Broly (Dragon Ball)", "Kaido (One Piece)"],
-        ["Frieza (Dragon Ball)", "Thanos (Marvel)"],
-        ["Beerus (Dragon Ball)", "Homelander (The Boys)"],
-        ["Gohan (Dragon Ball)", "Deku (My Hero Academia)"],
-        ["Piccolo (Dragon Ball)", "Kakashi (Naruto)"],
-        ["Vegito (Dragon Ball)", "Gogeta (Dragon Ball)"],
-        ["Zamasu (Dragon Ball)", "Light Yagami (Death Note)"],
-        ["Krillin (Dragon Ball)", "Rock Lee (Naruto)"],
-      ],
-
-      "My Hero Academia": [
-        ["Deku (My Hero Academia)", "Naruto (Naruto)"],
-        ["Deku (My Hero Academia)", "Peter Parker (Marvel)"],
-        ["All Might (My Hero Academia)", "Superman (DC)"],
-        ["All Might (My Hero Academia)", "Jiraiya (Naruto)"],
-        ["Bakugo (My Hero Academia)", "Vegeta (Dragon Ball)"],
-        ["Bakugo (My Hero Academia)", "Inosuke (Demon Slayer)"],
-        ["Shoto Todoroki (My Hero Academia)", "Zuko (Films cultes)"],
-        ["Endeavor (My Hero Academia)", "Vegeta (Dragon Ball)"],
-        ["Toga (My Hero Academia)", "Harley Quinn (DC)"],
-        ["Stain (My Hero Academia)", "Magneto (Marvel)"],
-        ["Dabi (My Hero Academia)", "Mahito (Jujutsu Kaisen)"],
-        ["Aizawa (My Hero Academia)", "Kakashi (Naruto)"],
-        ["Hawks (My Hero Academia)", "Itachi (Naruto)"],
-      ],
-
-      "Hunter x Hunter": [
-        ["Gon (Hunter x Hunter)", "Luffy (One Piece)"],
-        ["Gon (Hunter x Hunter)", "Naruto (Naruto)"],
-        ["Killua (Hunter x Hunter)", "Sasuke (Naruto)"],
-        ["Hisoka (Hunter x Hunter)", "Joker (DC)"],
-        ["Hisoka (Hunter x Hunter)", "Deadpool (Marvel)"],
-        ["Chrollo (Hunter x Hunter)", "Aizen (Bleach)"],
-        ["Meruem (Hunter x Hunter)", "Light Yagami (Death Note)"],
-        ["Netero (Hunter x Hunter)", "Yoda (Star Wars)"],
-        ["Kurapika (Hunter x Hunter)", "Sasuke (Naruto)"],
-        ["Illumi (Hunter x Hunter)", "Itachi (Naruto)"],
-        ["Bisky (Hunter x Hunter)", "Tsunade (Naruto)"],
-      ],
-
-      "Bleach": [
-        ["Ichigo (Bleach)", "Deku (My Hero Academia)"],
-        ["Ichigo (Bleach)", "Yuji Itadori (Jujutsu Kaisen)"],
-        ["Aizen (Bleach)", "Gojo (Jujutsu Kaisen)"],
-        ["Aizen (Bleach)", "Light Yagami (Death Note)"],
-        ["Kenpachi (Bleach)", "Broly (Dragon Ball)"],
-        ["Byakuya (Bleach)", "Itachi (Naruto)"],
-        ["Yhwach (Bleach)", "Madara (Naruto)"],
-        ["Urahara (Bleach)", "Kakashi (Naruto)"],
-        ["Rukia (Bleach)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["Grimmjow (Bleach)", "Bakugo (My Hero Academia)"],
-      ],
-
-      "Death Note": [
-        ["Light Yagami (Death Note)", "Aizen (Bleach)"],
-        ["Light Yagami (Death Note)", "Walter White (Breaking Bad)"],
-        ["Light Yagami (Death Note)", "Meruem (Hunter x Hunter)"],
-        ["L (Death Note)", "Shikamaru (Naruto)"],
-        ["L (Death Note)", "Near (Death Note)"],
-        ["Ryuk (Death Note)", "Joker (DC)"],
-        ["Misa (Death Note)", "Toga Himiko (My Hero Academia)"],
-        ["Light (Death Note)", "Lelouch vi Britannia (Films cultes)"],
-      ],
-
-      "Demon Slayer": [
-        ["Tanjiro (Demon Slayer)", "Yuji Itadori (Jujutsu Kaisen)"],
-        ["Tanjiro (Demon Slayer)", "Luffy (One Piece)"],
-        ["Rengoku (Demon Slayer)", "Ace (One Piece)"],
-        ["Zenitsu (Demon Slayer)", "Mineta (My Hero Academia)"],
-        ["Inosuke (Demon Slayer)", "Bakugo (My Hero Academia)"],
-        ["Muzan (Demon Slayer)", "Aizen (Bleach)"],
-        ["Muzan (Demon Slayer)", "Voldemort (Harry Potter)"],
-        ["Doma (Demon Slayer)", "Mahito (Jujutsu Kaisen)"],
-        ["Yoriichi (Demon Slayer)", "Gojo (Jujutsu Kaisen)"],
-        ["Akaza (Demon Slayer)", "Rengoku (Demon Slayer)"],
-      ],
-
-      "Attaque des Titans": [
-        ["Eren (Attaque des Titans)", "Kaneki Ken (Films cultes)"],
-        ["Eren (Attaque des Titans)", "Shinji Ikari (Films cultes)"],
-        ["Levi (Attaque des Titans)", "Zoro (One Piece)"],
-        ["Levi (Attaque des Titans)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["Armin (Attaque des Titans)", "Shikamaru (Naruto)"],
-        ["Reiner (Attaque des Titans)", "Sasuke (Naruto)"],
-        ["Reiner (Attaque des Titans)", "Eren (Attaque des Titans)"],
-        ["Zeke (Attaque des Titans)", "Madara (Naruto)"],
-        ["Historia (Attaque des Titans)", "Sansa Stark (Game of Thrones)"],
-        ["Hange (Attaque des Titans)", "Bulma (Dragon Ball)"],
-        ["Erwin (Attaque des Titans)", "Armin (Attaque des Titans)"],
-      ],
-
-      "One Punch Man": [
-        ["Saitama (One Punch Man)", "Goku (Dragon Ball)"],
-        ["Saitama (One Punch Man)", "All Might (My Hero Academia)"],
-        ["Saitama (One Punch Man)", "Superman (DC)"],
-        ["Garou (One Punch Man)", "Deku (My Hero Academia)"],
-        ["Garou (One Punch Man)", "Reiner Braun (Attaque des Titans)"],
-        ["Tatsumaki (One Punch Man)", "Sakura Haruno (Naruto)"],
-        ["Boros (One Punch Man)", "Frieza (Dragon Ball)"],
-        ["Bang (One Punch Man)", "Yoda (Star Wars)"],
-        ["Genos (One Punch Man)", "Vegeta (Dragon Ball)"],
-      ],
-
-      "Fairy Tail": [
-        ["Natsu (Fairy Tail)", "Luffy (One Piece)"],
-        ["Natsu (Fairy Tail)", "Ace (One Piece)"],
-        ["Erza (Fairy Tail)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["Gray (Fairy Tail)", "Sasuke (Naruto)"],
-        ["Zeref (Fairy Tail)", "Light Yagami (Death Note)"],
-        ["Laxus (Fairy Tail)", "Vegeta (Dragon Ball)"],
-        ["Mavis (Fairy Tail)", "Yuki (Films cultes)"],
-      ],
-
-      "Tokyo Revengers": [
-        ["Takemichi (Tokyo Revengers)", "Naruto (Naruto)"],
-        ["Takemichi (Tokyo Revengers)", "Deku (My Hero Academia)"],
-        ["Mikey (Tokyo Revengers)", "Luffy (One Piece)"],
-        ["Mikey (Tokyo Revengers)", "Hanma Shuji (Tokyo Revengers)"],
-        ["Draken (Tokyo Revengers)", "Zoro (One Piece)"],
-        ["Draken (Tokyo Revengers)", "Katsuki Bakugo (My Hero Academia)"],
-        ["Kisaki (Tokyo Revengers)", "Light Yagami (Death Note)"],
-        ["Kisaki (Tokyo Revengers)", "Aizen (Bleach)"],
-        ["Chifuyu (Tokyo Revengers)", "Killua (Hunter x Hunter)"],
-        ["Baji (Tokyo Revengers)", "Inosuke (Demon Slayer)"],
-        ["Hanma (Tokyo Revengers)", "Hisoka (Hunter x Hunter)"],
-        ["Mikey (Tokyo Revengers)", "Meruem (Hunter x Hunter)"],
-        ["Kazutora (Tokyo Revengers)", "Reiner Braun (Attaque des Titans)"],
-        ["Izana (Tokyo Revengers)", "Madara (Naruto)"],
-        ["Smiley (Tokyo Revengers)", "Toga Himiko (My Hero Academia)"],
-        ["Ran (Tokyo Revengers)", "Doflamingo (One Piece)"],
-        ["Rindo (Tokyo Revengers)", "Grimmjow (Bleach)"],
-        ["Haruchiyo Sanzu (Tokyo Revengers)", "Dabi (My Hero Academia)"],
-        ["South Terano (Tokyo Revengers)", "Kaido (One Piece)"],
-        ["Mikey (Tokyo Revengers)", "Eren Yeager (Attaque des Titans)"],
-      ],
-
-      // ═══════════════════════════════
-      // COMICS & SUPER-HÉROS
-      // ═══════════════════════════════
-
-      "Marvel": [
-        ["Spider-Man (Marvel)", "Miles Morales (Marvel)"],
-        ["Peter Parker (Marvel)", "Deku (My Hero Academia)"],
-        ["Iron Man (Marvel)", "Batman (DC)"],
-        ["Iron Man (Marvel)", "Homelander (The Boys)"],
-        ["Captain America (Marvel)", "Homelander (The Boys)"],
-        ["Captain America (Marvel)", "Soldier Boy (The Boys)"],
-        ["Thor (Marvel)", "Goku (Dragon Ball)"],
-        ["Wolverine (Marvel)", "Levi Ackerman (Attaque des Titans)"],
-        ["Hulk (Marvel)", "Broly (Dragon Ball)"],
-        ["Hulk (Marvel)", "Garou (One Punch Man)"],
-        ["Thanos (Marvel)", "Madara (Naruto)"],
-        ["Thanos (Marvel)", "Frieza (Dragon Ball)"],
-        ["Deadpool (Marvel)", "Hisoka (Hunter x Hunter)"],
-        ["Deadpool (Marvel)", "Joker (DC)"],
-        ["Scarlet Witch (Marvel)", "Tatsumaki (One Punch Man)"],
-        ["Magneto (Marvel)", "Stain (My Hero Academia)"],
-        ["Venom (Marvel)", "Ichigo (Bleach)"],
-        ["Black Widow (Marvel)", "Mikasa Ackerman (Attaque des Titans)"],
-      ],
-
-      "DC": [
-        ["Superman (DC)", "Homelander (The Boys)"],
-        ["Superman (DC)", "Goku (Dragon Ball)"],
-        ["Superman (DC)", "All Might (My Hero Academia)"],
-        ["Batman (DC)", "Iron Man (Marvel)"],
-        ["Batman (DC)", "Levi Ackerman (Attaque des Titans)"],
-        ["Joker (DC)", "Hisoka (Hunter x Hunter)"],
-        ["Joker (DC)", "Ryuk (Death Note)"],
-        ["The Flash (DC)", "A-Train (The Boys)"],
-        ["Wonder Woman (DC)", "Erza Scarlet (Fairy Tail)"],
-        ["Lex Luthor (DC)", "Light Yagami (Death Note)"],
-        ["Deathstroke (DC)", "Levi Ackerman (Attaque des Titans)"],
-        ["Aquaman (DC)", "The Deep (The Boys)"],
-        ["Shazam (DC)", "Deku (My Hero Academia)"],
-        ["Nightwing (DC)", "Zoro (One Piece)"],
-      ],
-
-      "The Boys": [
-        ["Homelander (The Boys)", "Superman (DC)"],
-        ["Homelander (The Boys)", "Vegeta (Dragon Ball)"],
-        ["Homelander (The Boys)", "All Might (My Hero Academia)"],
-        ["Soldier Boy (The Boys)", "Captain America (Marvel)"],
-        ["Soldier Boy (The Boys)", "Homelander (The Boys)"],
-        ["Starlight (The Boys)", "Captain America (Marvel)"],
-        ["Starlight (The Boys)", "Deku (My Hero Academia)"],
-        ["A-Train (The Boys)", "The Flash (DC)"],
-        ["A-Train (The Boys)", "Quicksilver (Marvel)"],
-        ["The Deep (The Boys)", "Aquaman (DC)"],
-        ["Black Noir (The Boys)", "Batman (DC)"],
-        ["Queen Maeve (The Boys)", "Wonder Woman (DC)"],
-        ["Queen Maeve (The Boys)", "Brienne de Torth (Game of Thrones)"],
-        ["Butcher (The Boys)", "Levi Ackerman (Attaque des Titans)"],
-        ["Butcher (The Boys)", "John Wick (Films cultes)"],
-        ["Kimiko (The Boys)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["Frenchie (The Boys)", "Deadpool (Marvel)"],
-        ["Ryan (The Boys)", "Homelander (The Boys)"],
-      ],
-
-      // ═══════════════════════════════
-      // SÉRIES & FILMS
-      // ═══════════════════════════════
-
-      "Star Wars": [
-        ["Luke Skywalker (Star Wars)", "Harry Potter (Harry Potter)"],
-        ["Anakin Skywalker (Star Wars)", "Eren Yeager (Attaque des Titans)"],
-        ["Darth Vader (Star Wars)", "Sauron (Films cultes)"],
-        ["Darth Vader (Star Wars)", "Thanos (Marvel)"],
-        ["Yoda (Star Wars)", "Iroh (Films cultes)"],
-        ["Palpatine (Star Wars)", "Voldemort (Harry Potter)"],
-        ["Mandalorian (Star Wars)", "Geralt de Riv (Jeux Video)"],
-        ["Boba Fett (Star Wars)", "Deathstroke (DC)"],
-        ["Obi-Wan (Star Wars)", "Dumbledore (Harry Potter)"],
-        ["Rey (Star Wars)", "Daenerys (Game of Thrones)"],
-        ["Han Solo (Star Wars)", "Jack Sparrow (Films cultes)"],
-        ["Ahsoka (Star Wars)", "Mikasa Ackerman (Attaque des Titans)"],
-      ],
-
-      "Harry Potter": [
-        ["Harry Potter (Harry Potter)", "Luke Skywalker (Star Wars)"],
-        ["Hermione Granger (Harry Potter)", "Armin Arlert (Attaque des Titans)"],
-        ["Dumbledore (Harry Potter)", "Gandalf (Films cultes)"],
-        ["Dumbledore (Harry Potter)", "Yoda (Star Wars)"],
-        ["Voldemort (Harry Potter)", "Palpatine (Star Wars)"],
-        ["Voldemort (Harry Potter)", "Muzan (Demon Slayer)"],
-        ["Draco Malfoy (Harry Potter)", "Zuko (Films cultes)"],
-        ["Sirius Black (Harry Potter)", "Remus Lupin (Harry Potter)"],
-        ["Bellatrix Lestrange (Harry Potter)", "Azula (Films cultes)"],
-        ["Snape (Harry Potter)", "Itachi (Naruto)"],
-        ["Neville Londubat (Harry Potter)", "Rock Lee (Naruto)"],
-      ],
-
-      "Game of Thrones": [
-        ["Jon Snow (Game of Thrones)", "Naruto (Naruto)"],
-        ["Daenerys (Game of Thrones)", "Eren Yeager (Attaque des Titans)"],
-        ["Daenerys (Game of Thrones)", "Azula (Films cultes)"],
-        ["Cersei (Game of Thrones)", "Lady Macbeth (Films cultes)"],
-        ["Tyrion Lannister (Game of Thrones)", "L (Death Note)"],
-        ["Arya Stark (Game of Thrones)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["Arya Stark (Game of Thrones)", "Killua Zoldyck (Hunter x Hunter)"],
-        ["Joffrey Baratheon (Game of Thrones)", "Shigaraki (My Hero Academia)"],
-        ["Littlefinger (Game of Thrones)", "Kisaki Tetta (Tokyo Revengers)"],
-        ["The Hound (Game of Thrones)", "Levi Ackerman (Attaque des Titans)"],
-        ["Jaime Lannister (Game of Thrones)", "Zuko (Films cultes)"],
-        ["Ramsay Bolton (Game of Thrones)", "Mahito (Jujutsu Kaisen)"],
-      ],
-
-      "Breaking Bad": [
-        ["Walter White (Breaking Bad)", "Light Yagami (Death Note)"],
-        ["Walter White (Breaking Bad)", "Macbeth (Films cultes)"],
-        ["Jesse Pinkman (Breaking Bad)", "Naruto (Naruto)"],
-        ["Gus Fring (Breaking Bad)", "Aizen (Bleach)"],
-        ["Saul Goodman (Breaking Bad)", "Jack Sparrow (Films cultes)"],
-        ["Lalo Salamanca (Breaking Bad)", "Doflamingo (One Piece)"],
-        ["Mike Ehrmantraut (Breaking Bad)", "Levi Ackerman (Attaque des Titans)"],
-        ["Hank Schrader (Breaking Bad)", "Erwin Smith (Attaque des Titans)"],
-      ],
-
-      "Films cultes": [
-        ["John Wick (Films cultes)", "Levi Ackerman (Attaque des Titans)"],
-        ["John Wick (Films cultes)", "Butcher (The Boys)"],
-        ["Tyler Durden (Films cultes)", "Light Yagami (Death Note)"],
-        ["Joker (DC)", "Ryuk (Death Note)"],
-        ["Hannibal Lecter (Films cultes)", "Aizen (Bleach)"],
-        ["Gandalf (Films cultes)", "Dumbledore (Harry Potter)"],
-        ["Frodo Baggins (Films cultes)", "Deku (My Hero Academia)"],
-        ["Terminator (Films cultes)", "Broly (Dragon Ball)"],
-        ["Leonidas (Films cultes)", "Levi Ackerman (Attaque des Titans)"],
-        ["Jack Sparrow (Films cultes)", "Luffy (One Piece)"],
-        ["Neo (Films cultes)", "Aang (Films cultes)"],
-        ["Patrick Bateman (Films cultes)", "Light Yagami (Death Note)"],
-        ["The Terminator (Films cultes)", "Robocop (Films cultes)"],
-        ["Anton Chigurh (Films cultes)", "Hisoka (Hunter x Hunter)"],
-      ],
-
-      "Disney / Pixar": [
-        ["Elsa (Disney / Pixar)", "Tatsumaki (One Punch Man)"],
-        ["Simba (Disney / Pixar)", "Eren Yeager (Attaque des Titans)"],
-        ["Maléfique (Disney / Pixar)", "Medusa (Films cultes)"],
-        ["Gaston (Disney / Pixar)", "Homelander (The Boys)"],
-        ["Scar (Disney / Pixar)", "Aizen (Bleach)"],
-        ["Buzz Eclair (Disney / Pixar)", "All Might (My Hero Academia)"],
-        ["Woody (Disney / Pixar)", "Naruto (Naruto)"],
-        ["Stitch (Disney / Pixar)", "Inosuke (Demon Slayer)"],
-        ["Moana (Disney / Pixar)", "Daenerys (Game of Thrones)"],
-      ],
-
-      // ═══════════════════════════════
-      // JEUX VIDÉO
-      // ═══════════════════════════════
-
-      "Jeux Video": [
-        ["Kratos (Jeux Video)", "Levi Ackerman (Attaque des Titans)"],
-        ["Kratos (Jeux Video)", "Guts (Films cultes)"],
-        ["Geralt de Riv (Jeux Video)", "Levi Ackerman (Attaque des Titans)"],
-        ["Geralt de Riv (Jeux Video)", "Mandalorian (Star Wars)"],
-        ["Joel (Jeux Video)", "Walter White (Breaking Bad)"],
-        ["Arthur Morgan (Jeux Video)", "Jon Snow (Game of Thrones)"],
-        ["Cloud Strife (Jeux Video)", "Sasuke (Naruto)"],
-        ["Sephiroth (Jeux Video)", "Madara (Naruto)"],
-        ["Solid Snake (Jeux Video)", "Levi Ackerman (Attaque des Titans)"],
-        ["Master Chief (Jeux Video)", "Iron Man (Marvel)"],
-        ["Link (Jeux Video)", "Frodo Baggins (Films cultes)"],
-        ["Dante (Jeux Video)", "Deadpool (Marvel)"],
-        ["Jinx (Jeux Video)", "Harley Quinn (DC)"],
-        ["Vi (Jeux Video)", "Levi Ackerman (Attaque des Titans)"],
-        ["Leon Kennedy (Jeux Video)", "Levi Ackerman (Attaque des Titans)"],
-        ["Aloy (Jeux Video)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["2B (Jeux Video)", "Mikasa Ackerman (Attaque des Titans)"],
-        ["Ellie (Jeux Video)", "Arya Stark (Game of Thrones)"],
-      ],
+      "Manga 🗾": {
+        "One Piece": [
+          ["Luffy (One Piece)", "Naruto (Naruto)"],
+          ["Zoro (One Piece)", "Levi (Attaque des Titans)"],
+          ["Sanji (One Piece)", "Rock Lee (Naruto)"],
+          ["Ace (One Piece)", "Rengoku (Demon Slayer)"],
+          ["Whitebeard (One Piece)", "Netero (Hunter x Hunter)"]
+        ],
+        "Naruto": [
+          ["Naruto (Naruto)", "Deku (My Hero Academia)"],
+          ["Sasuke (Naruto)", "Zuko (Avatar)"],
+          ["Itachi (Naruto)", "Aizen (Bleach)"],
+          ["Kakashi (Naruto)", "Gojo (Jujutsu Kaisen)"],
+          ["Madara (Naruto)", "Sukuna (Jujutsu Kaisen)"],
+          ["Shikamaru (Naruto)", "L (Death Note)"]
+        ],
+        "Dragon Ball": [
+          ["Goku (Dragon Ball)", "Superman (DC)"],
+          ["Vegeta (Dragon Ball)", "Bakugo (My Hero Academia)"],
+          ["Broly (Dragon Ball)", "Hulk (Marvel)"],
+          ["Frieza (Dragon Ball)", "Mewtwo (Pokémon)"],
+          ["Cell (Dragon Ball)", "Meruem (Hunter x Hunter)"]
+        ],
+        "Jujutsu Kaisen": [
+          ["Yuji Itadori (Jujutsu Kaisen)", "Tanjiro (Demon Slayer)"],
+          ["Gojo (Jujutsu Kaisen)", "Kakashi (Naruto)"],
+          ["Sukuna (Jujutsu Kaisen)", "Kurama (Naruto)"],
+          ["Mahito (Jujutsu Kaisen)", "Shigaraki (My Hero Academia)"]
+        ],
+        "My Hero Academia": [
+          ["Deku (My Hero Academia)", "Naruto (Naruto)"],
+          ["All Might (My Hero Academia)", "Superman (DC)"],
+          ["Bakugo (My Hero Academia)", "Vegeta (Dragon Ball)"],
+          ["Todoroki (My Hero Academia)", "Zuko (Avatar)"]
+        ],
+        "Hunter x Hunter": [
+          ["Gon (Hunter x Hunter)", "Midoriya (My Hero Academia)"],
+          ["Killua (Hunter x Hunter)", "Sasuke (Naruto)"],
+          ["Hisoka (Hunter x Hunter)", "Joker (DC)"],
+          ["Meruem (Hunter x Hunter)", "Cell (Dragon Ball)"]
+        ],
+        "Death Note": [
+          ["Light Yagami (Death Note)", "Lelouch (Code Geass)"],
+          ["L (Death Note)", "Shikamaru (Naruto)"],
+          ["Ryuk (Death Note)", "Joker (DC)"]
+        ],
+        "Attaque des Titans": [
+          ["Eren Yeager (Attaque des Titans)", "Lelouch (Code Geass)"],
+          ["Levi (Attaque des Titans)", "Zoro (One Piece)"],
+          ["Mikasa (Attaque des Titans)", "Rukia (Bleach)"]
+        ]
+      },
+      "Séries & Films 🎬": {
+        "Star Wars": [
+          ["Luke Skywalker (Star Wars)", "Harry Potter (Harry Potter)"],
+          ["Darth Vader (Star Wars)", "Voldemort (Harry Potter)"],
+          ["Yoda (Star Wars)", "Dumbledore (Harry Potter)"],
+          ["Han Solo (Star Wars)", "Jack Sparrow (Films)"],
+          ["Mandalorian (Star Wars)", "Geralt de Riv (Jeux Vidéo)"]
+        ],
+        "Harry Potter": [
+          ["Harry Potter (Harry Potter)", "Luke Skywalker (Star Wars)"],
+          ["Voldemort (Harry Potter)", "Darth Vader (Star Wars)"],
+          ["Dumbledore (Harry Potter)", "Gandalf (Films)"],
+          ["Drago Malefoy (Harry Potter)", "Zuko (Avatar)"]
+        ],
+        "Game of Thrones": [
+          ["Jon Snow (Game of Thrones)", "Aragorn (Films)"],
+          ["Daenerys (Game of Thrones)", "Eren Yeager (Attaque des Titans)"],
+          ["Arya Stark (Game of Thrones)", "Killua (Hunter x Hunter)"],
+          ["Tyrion Lannister (Game of Thrones)", "Shikamaru (Naruto)"]
+        ],
+        "Films cultes": [
+          ["John Wick (Films)", "Le Punisher (Marvel)"],
+          ["Neo (Matrix)", "Luke Skywalker (Star Wars)"],
+          ["Jack Sparrow (Films)", "Luffy (One Piece)"],
+          ["Joker (Films)", "Hisoka (Hunter x Hunter)"],
+          ["Terminator (Films)", "Robocop (Films)"]
+        ]
+      },
+      "Comics & Super-héros 🦸": {
+        "Marvel": [
+          ["Spider-Man (Marvel)", "Batman (DC)"],
+          ["Iron Man (Marvel)", "Batman (DC)"],
+          ["Captain America (Marvel)", "Superman (DC)"],
+          ["Thor (Marvel)", "Superman (DC)"],
+          ["Hulk (Marvel)", "Broly (Dragon Ball)"],
+          ["Thanos (Marvel)", "Darkseid (DC)"],
+          ["Deadpool (Marvel)", "Wolverine (Marvel)"]
+        ],
+        "DC": [
+          ["Batman (DC)", "Iron Man (Marvel)"],
+          ["Superman (DC)", "Goku (Dragon Ball)"],
+          ["Wonder Woman (DC)", "Captain Marvel (Marvel)"],
+          ["Joker (DC)", "Le Bouffon Vert (Marvel)"],
+          ["Flash (DC)", "Quicksilver (Marvel)"]
+        ],
+        "The Boys": [
+          ["Homelander (The Boys)", "Superman (DC)"],
+          ["Butcher (The Boys)", "Le Punisher (Marvel)"],
+          ["A-Train (The Boys)", "Flash (DC)"],
+          ["Soldier Boy (The Boys)", "Captain America (Marvel)"]
+        ]
+      },
+      "Jeux Vidéo 🎮": {
+        "Classiques": [
+          ["Mario (Jeux Vidéo)", "Sonic (Jeux Vidéo)"],
+          ["Link (Jeux Vidéo)", "Zelda (Jeux Vidéo)"],
+          ["Kratos (Jeux Vidéo)", "Doomguy (Jeux Vidéo)"],
+          ["Geralt de Riv (Jeux Vidéo)", "Mandalorian (Star Wars)"],
+          ["Master Chief (Jeux Vidéo)", "Doomguy (Jeux Vidéo)"],
+          ["Lara Croft (Jeux Vidéo)", "Nathan Drake (Jeux Vidéo)"],
+          ["Pikachu (Jeux Vidéo)", "Agumon (Digimon)"]
+        ]
+      }
     };
+
 
     const CATEGORIES_META = {
       "One Piece": { emoji: "⚓", color: "#ff9900" },
@@ -2839,7 +2579,7 @@
       players: [],
       numUndercover: 1,
       numMrWhite: 0,
-      selectedCats: new Set(Object.keys(DB)),
+      selectedCats: new Set(Object.values(DB).map(g => Object.keys(g)).flat()),
       // runtime
       roles: [],          // [{name, role:'civil'|'undercover'|'mrwhite', word, alive:true}]
       civilWord: '',
@@ -2903,6 +2643,7 @@
         setTimeout(() => p.remove(), 5000);
       }
     }
+
 
     // ══════════════════════════════════════════
     // SETUP — PLAYERS
@@ -2970,22 +2711,16 @@
     function renderCategoriesTo(containerId) {
       const container = document.getElementById(containerId);
       if (!container) return;
-      // Group by type
-      const groups = {
-        'Animé 🗾': ['One Piece', 'Naruto', 'Jujutsu Kaisen', 'Dragon Ball', 'My Hero Academia', 'Hunter x Hunter', 'Bleach', 'Death Note', 'Demon Slayer', 'Attaque des Titans', 'One Punch Man', 'Fairy Tail', 'Tokyo Revengers'],
-        'Comics & Super-héros 🦸': ['Marvel', 'DC', 'The Boys'],
-        'Séries & Films 🎬': ['Star Wars', 'Harry Potter', 'Game of Thrones', 'Breaking Bad', 'Films cultes', 'Disney / Pixar'],
-        'Jeux Vidéo 🎮': ['Jeux Video'],
-      };
+      
       container.innerHTML = '';
-      Object.entries(groups).forEach(([groupName, cats]) => {
+      Object.entries(DB).forEach(([groupName, subCats]) => {
         const group = document.createElement('div');
         group.className = 'cat-group';
         group.innerHTML = `<div class="cat-group-header">${groupName}</div>`;
         const grid = document.createElement('div');
         grid.className = 'cat-grid';
-        cats.forEach(cat => {
-          if (!DB[cat]) return;
+        
+        Object.keys(subCats).forEach(cat => {
           const meta = CATEGORIES_META[cat] || { emoji: '🎯', color: '#888' };
           const sel = state.selectedCats.has(cat);
           const item = document.createElement('div');
@@ -2994,6 +2729,7 @@
           item.onclick = () => toggleCat(cat, item);
           grid.appendChild(item);
         });
+        
         group.appendChild(grid);
         container.appendChild(group);
       });
@@ -3015,9 +2751,9 @@
       }
     }
 
-    function selectAllCats() { state.selectedCats = new Set(Object.keys(DB)); renderCategories(); }
+    function selectAllCats() { state.selectedCats = new Set(Object.values(DB).map(g => Object.keys(g)).flat()); renderCategories(); }
     function selectNoCats() {
-      state.selectedCats = new Set([Object.keys(DB)[0]]);
+      state.selectedCats = new Set([Object.keys(Object.values(DB)[0])[0]]);
       renderCategories();
       toast('Minimum 1 catégorie conservée', 'warning');
     }
@@ -3044,14 +2780,16 @@
 
       // Pick a word pair from selected categories
       let validPairs = [];
-      for (const cat of Object.keys(DB)) {
-        for (const pair of DB[cat]) {
-          const u1Match = pair[0].match(/\(([^)]+)\)$/);
-          const u1 = u1Match ? u1Match[1] : null;
-          const u2Match = pair[1].match(/\(([^)]+)\)$/);
-          const u2 = u2Match ? u2Match[1] : null;
-          if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
-            validPairs.push(pair);
+      for (const group of Object.values(DB)) {
+        for (const catPairs of Object.values(group)) {
+          for (const pair of catPairs) {
+            const u1Match = pair[0].match(/\(([^)]+)\)$/);
+            const u1 = u1Match ? u1Match[1] : null;
+            const u2Match = pair[1].match(/\(([^)]+)\)$/);
+            const u2 = u2Match ? u2Match[1] : null;
+            if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
+              validPairs.push(pair);
+            }
           }
         }
       }
@@ -3891,14 +3629,16 @@
 
       // Choisir paire de mots
       let validPairs = [];
-      for (const cat of Object.keys(DB)) {
-        for (const p of DB[cat]) {
-          const u1Match = p[0].match(/\(([^)]+)\)$/);
-          const u1 = u1Match ? u1Match[1] : null;
-          const u2Match = p[1].match(/\(([^)]+)\)$/);
-          const u2 = u2Match ? u2Match[1] : null;
-          if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
-            validPairs.push(p);
+      for (const group of Object.values(DB)) {
+        for (const catPairs of Object.values(group)) {
+          for (const p of catPairs) {
+            const u1Match = p[0].match(/\(([^)]+)\)$/);
+            const u1 = u1Match ? u1Match[1] : null;
+            const u2Match = p[1].match(/\(([^)]+)\)$/);
+            const u2 = u2Match ? u2Match[1] : null;
+            if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
+              validPairs.push(p);
+            }
           }
         }
       }
@@ -4436,6 +4176,13 @@
         // Hors ligne → retour écran setup avec joueurs actuels (reset partiel) ou relancer direct
         startGame();
       }
+    }
+
+    function promptRestartGame() {
+      showModal('🔄 Relancer ?', 'Voulez-vous relancer une nouvelle partie avec ces mêmes joueurs ?', [
+        { label: 'Annuler', cls: 'btn-ghost' },
+        { label: 'Relancer', cls: 'btn-primary', fn: onRejouer }
+      ]);
     }
 
     async function olReRevealCard() {
