@@ -3046,8 +3046,10 @@
       let validPairs = [];
       for (const cat of Object.keys(DB)) {
         for (const pair of DB[cat]) {
-          const u1 = pair[0].match(/\(([^)]+)\)$/)?.[1];
-          const u2 = pair[1].match(/\(([^)]+)\)$/)?.[1];
+          const u1Match = pair[0].match(/\(([^)]+)\)$/);
+          const u1 = u1Match ? u1Match[1] : null;
+          const u2Match = pair[1].match(/\(([^)]+)\)$/);
+          const u2 = u2Match ? u2Match[1] : null;
           if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
             validPairs.push(pair);
           }
@@ -3616,7 +3618,7 @@
       // Vérif config
 
       // Bouton loading
-      const btn = event?.currentTarget || document.querySelector('.mc-on');
+      const btn = (typeof event !== 'undefined' && event && event.currentTarget) ? event.currentTarget : document.querySelector('.mc-on');
       const origHTML = btn ? btn.innerHTML : '';
       if (btn) { btn.innerHTML = '<span style="opacity:.6">⏳ Connexion…</span>'; btn.style.pointerEvents = 'none'; }
 
@@ -3768,7 +3770,8 @@
         // Tolerance: 3 echecs consecutifs avant de couper (reseau instable)
         if (_pollFailCount >= 3) {
           olStopPoll();
-          const curId = document.querySelector('.screen.active')?.id || '';
+          const activeScreen = document.querySelector('.screen.active');
+          const curId = activeScreen ? activeScreen.id : '';
           // Ne pas quitter si on est déjà sur un écran final
           if (!['screen-victory', 'screen-home', 'screen-mode'].includes(curId)) {
             toast('❌ Connexion perdue — retour au menu');
@@ -3782,7 +3785,8 @@
       }
       _pollFailCount = 0; // reset compteur
 
-      const curId = document.querySelector('.screen.active')?.id || '';
+      const activeScreen = document.querySelector('.screen.active');
+      const curId = activeScreen ? activeScreen.id : '';
 
       if (room.phase === 'lobby') {
         if (curId === 'screen-ol-host') {
@@ -3889,8 +3893,10 @@
       let validPairs = [];
       for (const cat of Object.keys(DB)) {
         for (const p of DB[cat]) {
-          const u1 = p[0].match(/\(([^)]+)\)$/)?.[1];
-          const u2 = p[1].match(/\(([^)]+)\)$/)?.[1];
+          const u1Match = p[0].match(/\(([^)]+)\)$/);
+          const u1 = u1Match ? u1Match[1] : null;
+          const u2Match = p[1].match(/\(([^)]+)\)$/);
+          const u2 = u2Match ? u2Match[1] : null;
           if (u1 && u2 && state.selectedCats.has(u1) && state.selectedCats.has(u2)) {
             validPairs.push(p);
           }
@@ -4147,7 +4153,7 @@
       } else if (!isMyTurn) {
         startWrap.style.display = 'none';
         passWrap.style.display = 'none';
-        if (waitMsg) waitMsg.textContent = `C'est au tour de ${currentPlayer?.name || ''}…`;
+        if (waitMsg) waitMsg.textContent = `C'est au tour de ${currentPlayer ? currentPlayer.name : ''}…`;
       }
 
       // Progress dots
@@ -4193,7 +4199,7 @@
     let _olSelectedVote = -1;
 
     function olRenderVote(room, alive) {
-      OL.voteSubmitted = room.players[OL.myIndex]?.voted || false;
+      OL.voteSubmitted = (room.players && room.players[OL.myIndex]) ? room.players[OL.myIndex].voted : false;
       const el = document.getElementById('ol-vote-list');
       // Reset résultats (ancienne partie)
       const resultsEl = document.getElementById('ol-vote-results');
@@ -4278,11 +4284,11 @@
 
       // Vérifier victoire
       const aliveIdx = room.players.map((p, i) => p.alive ? i : -1).filter(i => i >= 0);
-      const ucAlive = aliveIdx.filter(i => room.assignments[i]?.role === 'undercover');
-      const mwAlive = aliveIdx.filter(i => room.assignments[i]?.role === 'mrwhite');
-      const civAlive = aliveIdx.filter(i => room.assignments[i]?.role === 'civil');
+      const ucAlive = aliveIdx.filter(i => (room.assignments && room.assignments[i] ? room.assignments[i].role : null) === 'undercover');
+      const mwAlive = aliveIdx.filter(i => (room.assignments && room.assignments[i] ? room.assignments[i].role : null) === 'mrwhite');
+      const civAlive = aliveIdx.filter(i => (room.assignments && room.assignments[i] ? room.assignments[i].role : null) === 'civil');
       const impostors = ucAlive.length + mwAlive.length;
-      const elimRole = room.assignments[idx]?.role;
+      const elimRole = (room.assignments && room.assignments[idx]) ? room.assignments[idx].role : null;
 
       if (ucAlive.length === 0 && mwAlive.length === 0) {
         room.phase = 'victory'; room.winner = 'civil';
