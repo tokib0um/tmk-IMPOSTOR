@@ -2971,9 +2971,9 @@
       const bar = document.getElementById('cs-ring-bar');
       bar.style.strokeDashoffset = '0';
       bar.setAttribute('class', 'cs-ring-bar');
-      document.getElementById('cs-start-wrap').style.display = 'none';
+      document.getElementById('cs-start-wrap').style.display = 'block';
       document.getElementById('cs-pass-wrap').style.display = 'none';
-      _csDelayTimer = setTimeout(csStart, 3000);
+      // No auto-start
     }
 
     function csStart() {
@@ -3787,6 +3787,8 @@
 
     function olCsResetChrono() {
       if (_olChronoTimer) clearInterval(_olChronoTimer);
+      _olChronoTimer = null;
+      OL._timerStarted = false;
       _olChronoSec = 60;
       const timeEl = document.getElementById('ol-cs-time');
       const bar = document.getElementById('ol-cs-ring-bar');
@@ -3797,6 +3799,7 @@
     function olCsStart() {
       if (OL._passLocked) return; // anti-spam
       OL._passLocked = false; // reset pour le pass
+      OL._timerStarted = true;
       SFX.start();
       document.getElementById('ol-cs-start-wrap').style.display = 'none';
       document.getElementById('ol-cs-pass-wrap').style.display = 'block';
@@ -3915,14 +3918,16 @@
       const passWrap = document.getElementById('ol-cs-pass-wrap');
       const waitMsg = document.getElementById('ol-cs-wait-msg');
 
-      if (isMyTurn && !_olChronoTimer) {
-        OL._passLocked = false; // reset verrou pour le nouveau tour
-        olCsResetChrono();
-        startWrap.style.display = 'none';
-        passWrap.style.display = 'block';
-        if (waitMsg) waitMsg.textContent = '';
-        olCsStart();
-      } else if (!isMyTurn) {
+      if (isMyTurn) {
+        if (!_olChronoTimer && !OL._timerStarted && _olChronoSec === 60) {
+          OL._passLocked = false; // reset verrou pour le nouveau tour
+          olCsResetChrono();
+          startWrap.style.display = 'block';
+          passWrap.style.display = 'none';
+          if (waitMsg) waitMsg.textContent = '';
+        }
+      } else {
+        OL._timerStarted = false; // reset flag
         startWrap.style.display = 'none';
         passWrap.style.display = 'none';
         if (waitMsg) waitMsg.textContent = `C'est au tour de ${currentPlayer ? currentPlayer.name : ''}…`;
