@@ -2966,14 +2966,20 @@
       if (_chronoTimer) clearInterval(_chronoTimer);
       clearTimeout(_csDelayTimer);
       _chronoSec = CHRONO_DURATION;
-      document.getElementById('cs-time').textContent = 'Prêt ?';
+      document.getElementById('cs-time').textContent = '60';
       document.getElementById('cs-time').className = 'cs-time';
       const bar = document.getElementById('cs-ring-bar');
       bar.style.strokeDashoffset = '0';
       bar.setAttribute('class', 'cs-ring-bar');
-      document.getElementById('cs-start-wrap').style.display = 'block';
-      document.getElementById('cs-pass-wrap').style.display = 'none';
-      // No auto-start
+
+      if (state.round === 1 && state.currentSpeaker === 0) {
+        document.getElementById('cs-start-wrap').style.display = 'block';
+        document.getElementById('cs-pass-wrap').style.display = 'none';
+      } else {
+        document.getElementById('cs-start-wrap').style.display = 'none';
+        document.getElementById('cs-pass-wrap').style.display = 'none';
+        _csDelayTimer = setTimeout(csStart, 3000);
+      }
     }
 
     function csStart() {
@@ -3788,7 +3794,6 @@
     function olCsResetChrono() {
       if (_olChronoTimer) clearInterval(_olChronoTimer);
       _olChronoTimer = null;
-      OL._timerStarted = false;
       _olChronoSec = 60;
       const timeEl = document.getElementById('ol-cs-time');
       const bar = document.getElementById('ol-cs-ring-bar');
@@ -3799,7 +3804,6 @@
     function olCsStart() {
       if (OL._passLocked) return; // anti-spam
       OL._passLocked = false; // reset pour le pass
-      OL._timerStarted = true;
       SFX.start();
       document.getElementById('ol-cs-start-wrap').style.display = 'none';
       document.getElementById('ol-cs-pass-wrap').style.display = 'block';
@@ -3918,16 +3922,25 @@
       const passWrap = document.getElementById('ol-cs-pass-wrap');
       const waitMsg = document.getElementById('ol-cs-wait-msg');
 
+      const turnKey = room.round + '-' + speakerIdx;
+
       if (isMyTurn) {
-        if (!_olChronoTimer && !OL._timerStarted && _olChronoSec === 60) {
-          OL._passLocked = false; // reset verrou pour le nouveau tour
+        if (OL._lastTurnKey !== turnKey) {
+          OL._lastTurnKey = turnKey;
+          OL._passLocked = false;
           olCsResetChrono();
-          startWrap.style.display = 'block';
-          passWrap.style.display = 'none';
+          startWrap.style.display = 'none';
+          passWrap.style.display = 'block';
           if (waitMsg) waitMsg.textContent = '';
+          olCsStart(); // Auto-start once per turn
+        }
+        // If timer hit 0, _olChronoTimer is null but _lastTurnKey is still turnKey
+        // So we don't auto-start again, but we make sure passWrap is visible
+        if (!_olChronoTimer && _olChronoSec === 0) {
+          passWrap.style.display = 'block';
         }
       } else {
-        OL._timerStarted = false; // reset flag
+        OL._lastTurnKey = null; // reset for next time it becomes our turn
         startWrap.style.display = 'none';
         passWrap.style.display = 'none';
         if (waitMsg) waitMsg.textContent = `C'est au tour de ${currentPlayer ? currentPlayer.name : ''}…`;
